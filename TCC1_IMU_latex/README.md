@@ -1,12 +1,10 @@
-#Template TCC FGA-UnB
+#TCC IMU_MOCAP - FGA-UnB
 
-Template para Trabalhos de Conclusão de Cursos (TCC) na Faculdade do
-Gama (FGA) em Latex.
+Trabalho de Conclusão de Curso 
 
-Licenciado em Creative Commons Atribuição 3.0:
-http://creativecommons.org/licenses/by/3.0/
+Template desenvolvido por Edson Alves <edsomjr@gmail.com>.
 
-Desenvolvido e adaptado pelo professor Edson Alves <edsomjr@gmail.com>.
+Trabalho Desenvolvido por Eduardo S. Sales <eduardo-ssr@hotmail.com>
 
 ## Instalando o abnTeX2
 
