@@ -62,25 +62,73 @@ sensor quando é usado muito próximo de material ferromagnético. Por outro lad
 
 E com essas variáveis adquiridas um padrão de movimento pode ser traçado, e assim podem ser feitas análises sobre a movimentação humana. Assim, junto com a EMG\footnote{Eletromiografia}, o uso de sensores inercias tem sido mais solicitado na área de monitoramento de práticas esportivas\cite{howard2016}.
 
-Porém, a utilização de IMU's com equipamentos de comunição sem fio, têm mostrado uma certa vantagem sobre o uso de sensores com EMG. Isso ocorre por conta de a integração entre acelerômetros, giroscópios e dispositivos de transmissão sem fio ser mais simplificada do que a aquisição de dados por eletromiógrafos sem fio\cite{howard2016}. 
+Porém, a utilização de IMU's com equipamentos de comunicação sem fio, têm mostrado uma certa vantagem sobre o uso de sensores com EMG. Isso ocorre por conta de a integração entre acelerômetros, giroscópios e dispositivos de transmissão sem fio ser mais simplificada do que a aquisição de dados por eletromiógrafos sem fio\cite{howard2016}. 
 
-Os testes que foram feitos com uso de sensores inerciais, segundo  Howard,2016 , foram capazes de produzir dados relaconados com fadiga muscular, perfomance, postura e velocidade. O que possibilita melhores técnicas de treinamento e até mesmo prevenção de lesão pode ser realizada.
+Os testes que foram feitos com uso de sensores inerciais, segundo  Howard,2016 , foram capazes de produzir dados relacionados com fadiga muscular, performance, postura e velocidade. O que possibilita melhores técnicas de treinamento e até mesmo prevenção de lesão pode ser realizada.
 
 \subsection{Acelerômetro}
 
-O acelerômetro funciona a partir do efeito de cristais piezoelétricos, que é o princípio no qual alguns cristais geram uma corrente elétrica como resposta a uma pressão mecânica. Então o sensor acelerômetro  funciona como na Figura \ref{acel} demonstra, como uma pequena caixa com uma esfera dentro, e as paredes são os cristais piezoelétricos.  Sempre que a caixa é alterada de posição a esfera é forçada a se mover em direção de uma das paredes devido a força da gravidade ou de qualquer outra força de aceleração em outro sentido que não a normal. Cada par de paredes paralelos correspondem a um eixo no espaço. Assim, a partir da corrente gerada em cada parede é possível determinar a direção do movimento acelerado e sua magnitude\cite{sanjeev2018}.
+O que sensores de movimento são feitos para aferir uma taxa de variação de posição, ou seja o deslocamento que estiver ocorrendo. Assim, se a posição, $x(t)$, de um corpo varia ao longo tempo, então será obtida sua velocidade, $v(t)$,  derivando essa mudança de posição ao longo do tempo. E ao derivar a variação de velocidade ao longo do tempo será calculada a aceleração, $a(t)$, do corpo \cite{moyses2013}.
+\begin{equation}
+v(t) = \frac{dx(t)}{dt}
+\end{equation}
+
+\begin{equation}
+a(t) = \frac{dv(t)}{dt} = \frac{d^2v(t)}{dt^2} 
+\end{equation}
+
+Um acelerômetro é capaz de medir a aceleração, e a partir desse dado é possível obter também a velocidade e posição. Basta fazer a operação inversa a derivada\cite{moyses2013}.
+
+\begin{equation}
+v(t) = v(0) + \int_{0}^{1}(a(t)dt)
+\end{equation}
+\begin{equation}
+x(t) = x(0) + \int_{0}^{1}(v(t)dt)
+\end{equation}
+Acelerômetros podem ser utilizados em muitas áreas, como na  automotiva com air bags, na navegação,no monitoramento de máquinas, na saúde, jogos e outras. São diversos os processos físicos utilizados para desenvolver um sensor para
+medir aceleração. Em aplicações que envolvem voo, aviões e satélites,
+acelerômetros são baseados em propriedades de massas rotativas. Na industria,
+porém, o projeto mais comuns são feitos a partir da combinação da lei de Newton de
+aceleração de massa e a lei de Hooke de ação de mola \cite{carneiro2003}.
+
+O acelerômetro escolhido para esse trabalho funciona a partir do efeito de cristais piezoelétricos, que é o princípio no qual alguns cristais geram uma corrente elétrica como resposta a uma pressão mecânica. Então o sensor acelerômetro  funciona como na Figura \ref{acel} demonstra, como uma pequena caixa com uma esfera dentro, e as paredes são os cristais piezoelétricos.  Sempre que a caixa é alterada de posição a esfera é forçada a se mover em direção de uma das paredes devido a força da gravidade ou de qualquer outra força de aceleração em outro sentido que não a normal. Cada par de paredes paralelos correspondem a um eixo no espaço. Assim, a partir da corrente gerada em cada parede é possível determinar a direção do movimento acelerado e sua magnitude \cite{Sanjeev2018}.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.5
+	\includegraphics[keepaspectratio=true,scale=0.8
 	]{figuras/acelerometro.png}
 	\caption{Princípio de funcionamento do acelerômetro.}
-	Fonte adaptada de NÃO SEI AINDA
+	Fonte adaptada de \cite{Sanjeev2018}
 	\label{acel}
 	
 \end{figure}
 
 \subsection{Giroscópio}
+
+Os giroscópios também são sensores de movimento, porém eles não medem aceleração linear como os acelerômetros, eles disponibilizam ao usuário a velocidade angular de um objeto em torno de um eixo. Em geral, os giroscópios feitos com tecnologia MEMS utilizam do efeito Coriolis, no qual um objeto que se encontra em um movimento de rotação, imprime na massa um movimento ortogonal a direção de rotação. Os giroscópios têm um princípio muito mais complexo que os acelerômetros, este e um dos motivos fizeram eles demorarem mais a parecer como dispositivos MEMS \cite{almeida2014}.
+
+O giroscópio do tipo diapasão, modelo utilizado no trabalho, é constituído por duas massas paralelas que oscilam com a mesma amplitude, direção igual e sentidos opostos mostrado na Figura .
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.7
+	]{figuras/diapasao.png}
+	\caption{ Imagem de microscopia eletrônica por varredura de um giroscópio diapasão.}
+	Fonte adaptada de \cite{forhan2010}
+	\label{gyro}
+	
+\end{figure}
+
+Ao acontecer uma rotação, a força de Coriolis gera uma vibração ortogonal ao sentido do movimento de cada massa. A amplitude desse movimento pode ser medido de forma capacitiva. A utilização de dois giroscópios na mesma direção e em sentidos opostos aumenta a precisão da medição. Com a medida da força de Coriolis  $F_{c}$, a medida da massas paralelas $m$, se movendo a um determinada velocidade $v$, com relação a um referencial fixo que possua uma velocidade angular $ \Omega $ é possível obter a aceleração de Coriolis $a_{c}$. \cite{forhan2010}.
+
+\begin{equation}
+F_{c} = 2mv\Omega
+\end{equation}
+\begin{equation}
+a_{c} = 2v\Omega
+\end{equation}
+ 
+%Os giroscópios são similares em operação aos acelerômetros; no entanto, eles são usados ​​para detectar a velocidade angular, geralmente com uma saída de graus por segundo. Essa funcionalidade os torna muito úteis em conjunto com acelerômetros para um sistema que requer rastreamento de movimento confiável.
 
 \subsection{MPU6050}
 	
@@ -121,7 +169,30 @@ O acelerômetro funciona a partir do efeito de cristais piezoelétricos, que é 
 	
 	
 
-\subsection{Atmega328}
+\subsection{Arduino}
+
+\begin{table}[h]
+	\centering
+	\caption{Tabela de comparação dos modelos de Arduino}
+	\label{tipos_arduino}
+	
+	\begin{tabular}{lccccc}
+		\toprule
+		\textbf{Modelos} & \textbf{Lilypad} & 
+		\textbf{Uno} & \textbf{Pro} & \textbf{Mega}  & \textbf{Nano} \\
+		\midrule
+		Microcontrolador & ATmega32u4 & ATmega328P & ATmega238 & ATmega2560 & ATmega328P \\
+		Tensão de Operação & 3.3V & 5V & 3.3/5V & 5V & 5V \\
+		Tensão de Entrada & 3.8-5V & 7-12V & 5-12V & 7-12V & 5-12V \\
+		Pinos Digitais & 9 & 14 & 14 & 54 & 14 \\
+		Entradas Analógicas & 4 & 6 & 6 & 16 & 6 \\
+		Memória Flash & 32kB & 32kB & 32kB & 256kB & 32kB \\
+		Velocidade do Clock & 8MHz & 16MHz & 8/16MHz & 16MHz & 16MHz \\
+		Dimensões Físicas & 50mm$\oslash$ & 68.6 x 53.4mm & 52 x 53mm & 101.5x53.5mm &  18,5 x 43,2mm \\
+		Custo Aproximado\footnote{Preços pesquisados em lojas de Brasília.} & R\$ 22,00 & R\$ 54,00 &  R\$ 50,00 & R\$ 80,00 & R\$ 24,00 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \section{Python}
 
