@@ -1,150 +1,150 @@
 %\part{Referencial Teórico}
 
 \chapter[Referencial Teórico]{Referencial Teórico}
+Nesta seção do artigo serão explicados conceitos importantes para realização do projeto, especificação de alguns materiais e a motivação para a escolha dos mesmos.  
+	\section{MEMS}
 
-\section{MEMS}
+		MEMS\footnote{Micro Electro Mechanical Systems - Sistema Micro-eletromecânicos}  é uma tecnologia de processamento usada para criar dispositivos integrados ou sistemas que combinam componentes mecânicos e elétricos. Eles são fabricado usando técnicas de processamento em lote de circuitos integrados e pode variar em tamanho entre alguns micrômetros para milímetros. Esses dispositivos (ou sistemas) têm a capacidade de detectar, controlar e atuar na escala micro e gerar efeitos em escala macro\cite{prime2002}. 
 
-MEMS\footnote{Micro Electro Mechanical Systems - Sistema Micro-eletromecânicos}  é uma tecnologia de processamento usada para criar dispositivos integrados ou sistemas que combinam componentes mecânicos e elétricos. Eles são fabricado usando técnicas de processamento em lote de circuitos integrados e pode variar em tamanho entre alguns micrômetros para milímetros. Esses dispositivos (ou sistemas) têm a capacidade de detectar, controlar e atuar na escala micro e gerar efeitos em escala macro\cite{prime2002}. 
+		O termo MEMS, é um acrônimo originado nos Estados Unidos, também é conhecido como Microsystems Technology (MST) na Europa e Micromachines no Japão. Independentemente da terminologia, o fator de define um dispositivo MEMS está na maneira como é feito. Enquanto os aparelhos eletrônicos são fabricados usando tecnologia IC de 'chip de computador', os componentes micromecânicos são fabricados por sofisticadas manipulações com silício e outros substratos usando processos de micro-usinagem. Processos como micro-usinagem a granel e de superfície, bem como micromaquinação de alta proporção (HARM \footnote{high-aspect-ratio micromachining}) remove seletivamente partes do silício ou adiciona camadas estruturais adicionais para formar os componentes mecânicos e eletromecânicos. Enquanto circuitos integrados são projetados para explorar as propriedades elétricas do silício, o MEMS aproveita as propriedades mecânicas do silício ou suas propriedades elétricas e mecânicas\cite{prime2002}.
 
-O termo MEMS, é um acrônimo originado nos Estados Unidos, também é conhecido como Microsystems Technology (MST) na Europa e Micromachines no Japão. Independentemente da terminologia, o fator de define um dispositivo MEMS está na maneira como é feito. Enquanto os aparelhos eletrônicos são fabricados usando tecnologia IC de 'chip de computador', os componentes micromecânicos são fabricados por sofisticadas manipulações com silício e outros substratos usando processos de micro-usinagem. Processos como micro-usinagem a granel e de superfície, bem como micromaquinação de alta proporção (HARM \footnote{high-aspect-ratio micromachining}) remove seletivamente partes do silício ou adiciona camadas estruturais adicionais para formar os componentes mecânicos e eletromecânicos. Enquanto circuitos integrados são projetados para explorar as propriedades elétricas do silício, o MEMS aproveita as propriedades mecânicas do silício ou suas propriedades elétricas e mecânicas\cite{prime2002}.
+		Na forma mais geral, os MEMS consistem em microestruturas mecânicas, microssensores, microatuadores e microeletrônica, todos integrados no mesmo chip de silício (Fig. \ref{esquematico_mems}). Microsensores detectam mudanças no ambiente do sistema medindo informações ou fenômenos mecânicos, térmicos, magnéticos, químicos ou eletromagnéticos. Microeletrônica processa essa informação e sinaliza aos microatuadores para reagirem e criarem alguma forma de mudanças no meio ambiente\cite{prime2002}.
 
-Na forma mais geral, os MEMS consistem em microestruturas mecânicas, microssensores, microatuadores e microeletrônica, todos integrados no mesmo chip de silício (Fig. \ref{esquematico_mems}). Microsensores detectam mudanças no ambiente do sistema medindo informações ou fenômenos mecânicos, térmicos, magnéticos, químicos ou eletromagnéticos. Microeletrônica processa essa informação e sinaliza aos microatuadores para reagirem e criarem alguma forma de mudanças no meio ambiente\cite{prime2002}.
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=0.5
+			]{figuras/esquematico_mems.png}
+			\caption{Ilustração esquemática de componentes MEMS}
+			Fonte: \cite{prime2002}
+			\label{esquematico_mems}
+		\end{figure}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.5
-	]{figuras/esquematico_mems.png}
-	\caption{Ilustração esquemática de componentes MEMS}
-	Fonte: \cite{prime2002}
-	\label{esquematico_mems}
-\end{figure}
+		Os dispositivos MEMS são muito pequenos, seus componentes são geralmente microscópicos(Fig. \ref{escala_mems}). Alavancas, engrenagens, pistões, motores e até motores a vapor foram todos fabricados por MEMS. No entanto, MEMS não se refere apenas à miniaturização de componentes mecânicos ou à fabricação de coisas a partir do silício (na verdade, o termo MEMS é na verdade enganoso, já que muitos dispositivos micromachinados não são mecânicos em nenhum sentido). MEMS é uma tecnologia de fabricação; um paradigma para projetar e criar dispositivos e sistemas mecânicos complexos, bem como sua eletrônica integrada, utilizando técnicas de fabricação em lote\cite{prime2002}.
 
-Os dispositivos MEMS são muito pequenos, seus componentes são geralmente microscópicos(Fig. \ref{escala_mems}). Alavancas, engrenagens, pistões, motores e até motores a vapor foram todos fabricados por MEMS. No entanto, MEMS não se refere apenas à miniaturização de componentes mecânicos ou à fabricação de coisas a partir do silício (na verdade, o termo MEMS é na verdade enganoso, já que muitos dispositivos micromachinados não são mecânicos em nenhum sentido). MEMS é uma tecnologia de fabricação; um paradigma para projetar e criar dispositivos e sistemas mecânicos complexos, bem como sua eletrônica integrada, utilizando técnicas de fabricação em lote\cite{prime2002}.
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=0.5
+			]{figuras/escala_mems.png}
+			\caption{Um motor MEMS ao lado de uma fio de cabelo humano.}
+			Fonte: \cite{prime2002}
+			\label{escala_mems}
+		\end{figure}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.5
-	]{figuras/escala_mems.png}
-	\caption{Um motor MEMS ao lado de uma fio de cabelo humano.}
-	Fonte: \cite{prime2002}
-	\label{escala_mems}
-\end{figure}
+	\section{IMU}
 
-\section{IMU}
+		A história do sensor IMU começou em 1930, quando foi usado para auxiliar a navegação de aeronaves e outros dispositivos de grande porte. Por causa de suas restrições principalmente em tamanho, custo e consumo de energia, o uso da IMU naquele momento era restrito a aplicações em dispositivos grandes e, portanto, impopular para equipamentos de tamanho menor e em grande escala de consumo. Porém, recentemente, o sensor IMU feito por MEMS, foi introduzido com uma característica muito atraente de baixo custo, com poder de processamento e baixo custo. A demanda aumentou muito e as áreas de aplicação também. Atualmente, muitos fabricantes estão competindo nos melhores projetos de IMU, como Invensense, Honeywell, STMicroelectronics, Microstrain e X-Sens\cite{ahmad2013}.
+		
+		Os sensores IMU podem ser capazes de medir diversas variáveis. Os mais comuns são feitos para medir 6 graus de liberdade. São 3 medidas de aceleração linear a partir de um acelerômetro e 3 medidas de aceleração angular feitas por um giroscópio (Fig.\ref{eixos_imu})\cite{santos2016}.
+		 
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=0.8]{figuras/Eixos_imu.png}
+			\caption{Eixos de orientação.}
+			Fonte adaptada de \cite{mpu6050}
+			\label{eixos_imu}	
+		\end{figure}
 
-A história do sensor IMU começou em 1930, quando foi usado para auxiliar a navegação de aeronaves e outros dispositivos de grande porte. Por causa de suas restrições principalmente em tamanho, custo e consumo de energia, o uso da IMU naquele momento era restrito a aplicações em dispositivos grandes e, portanto, impopular para equipamentos de tamanho menor e em grande escala de consumo. Porém, recentemente, o sensor IMU feito por MEMS, foi introduzido com uma característica muito atraente de baixo custo, com poder de processamento e baixo custo. A demanda aumentou muito e as áreas de aplicação também. Atualmente, muitos fabricantes estão competindo nos melhores projetos de IMU, como Invensense, Honeywell, STMicroelectronics, Microstrain e X-Sens\cite{ahmad2013}.
 
-Os sensores IMU podem ser capazes de medir diversas variáveis. Os mais comuns são feitos para medir 6 graus de liberdade. São 3 medidas de aceleração linear a partir de um acelerômetro e 3 medidas de aceleração angular feitas por um giroscópio (Fig.\ref{eixos_imu})\cite{santos2016}.
- 
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.6
-	]{figuras/Eixos_imu.png}
-	\caption{Eixos de orientação.}
-	Fonte adaptada de \cite{mpu6050}
-	\label{eixos_imu}
+		A vantagem de usar este tipo de IMU é que não será interferido pelo campo magnético externo em torno do
+		sensor quando é usado muito próximo de material ferromagnético. Por outro lado, dependendo do acelerômetro e do giroscópio, pode não ser suficiente para aumentar a precisão da medição devido ao ruído dos sensores e à questão do desvio do giroscópio. Os dados adquiridos pelo IMU são integrados como a mostrado na Figura \ref{integracao_imu} \cite{ahmad2013}.
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=0.3
+			]{figuras/integracao_imu.png}
+			\caption{Sensor inercial baseado em 2 sensores}
+			Fonte adaptada de \cite{ahmad2013}
+			\label{integracao_imu}
+			
+		\end{figure}
+
+		E com essas variáveis adquiridas um padrão de movimento pode ser traçado, e assim podem ser feitas análises sobre a movimentação humana. Assim, junto com a EMG\footnote{Eletromiografia}, o uso de sensores inercias tem sido mais solicitado na área de monitoramento de práticas esportivas\cite{howard2016}.
+		
+		Porém, a utilização de IMU's com equipamentos de comunicação sem fio, têm mostrado uma certa vantagem sobre o uso de sensores com EMG. Isso ocorre por conta de a integração entre acelerômetros, giroscópios e dispositivos de transmissão sem fio ser mais simplificada do que a aquisição de dados por eletromiógrafos sem fio\cite{howard2016}. 
+		
+		Os testes que foram feitos com uso de sensores inerciais, segundo  Howard,2016 , foram capazes de produzir dados relacionados com fadiga muscular, performance, postura e velocidade. O que possibilita melhores técnicas de treinamento e até mesmo prevenção de lesão pode ser realizada.
+
+			\subsection{Acelerômetro}
+			
+				O que sensores de movimento são feitos para aferir uma taxa de variação de posição, ou seja o deslocamento que estiver ocorrendo. Assim, se a posição, $x(t)$, de um corpo varia ao longo tempo, então será obtida sua velocidade, $v(t)$,  derivando essa mudança de posição ao longo do tempo. E ao derivar a variação de velocidade ao longo do tempo será calculada a aceleração, $a(t)$, do corpo \cite{moyses2013}.
+				\begin{equation}
+				v(t) = \frac{dx(t)}{dt}
+				\end{equation}
+				
+				\begin{equation}
+				a(t) = \frac{dv(t)}{dt} = \frac{d^2v(t)}{dt^2} 
+				\end{equation}
+				
+				Um acelerômetro é capaz de medir a aceleração, e a partir desse dado é possível obter também a velocidade e posição. Basta fazer a operação inversa a derivada\cite{moyses2013}.
+				
+				\begin{equation}
+				v(t) = v(0) + \int_{0}^{1}(a(t)dt)
+				\end{equation}
+				\begin{equation}
+				x(t) = x(0) + \int_{0}^{1}(v(t)dt)
+				\end{equation}
+				
+				Acelerômetros podem ser utilizados em muitas áreas, como na  automotiva com air bags, na navegação,no monitoramento de máquinas, na saúde, jogos e outras. São diversos os processos físicos utilizados para desenvolver um sensor para
+				medir aceleração. Em aplicações que envolvem voo, aviões e satélites,
+				acelerômetros são baseados em propriedades de massas rotativas. Na industria,
+				porém, o projeto mais comuns são feitos a partir da combinação da lei de Newton de
+				aceleração de massa e a lei de Hooke de ação de mola \cite{carneiro2003}.
+				
+				O acelerômetro escolhido para esse trabalho funciona a partir do efeito de cristais piezoelétricos, que é o princípio no qual alguns cristais geram uma corrente elétrica como resposta a uma pressão mecânica. Então o sensor acelerômetro  funciona como na Figura \ref{acel} demonstra, como uma pequena caixa com uma esfera dentro, e as paredes são os cristais piezoelétricos.  Sempre que a caixa é alterada de posição a esfera é forçada a se mover em direção de uma das paredes devido a força da gravidade ou de qualquer outra força de aceleração em outro sentido que não a normal. Cada par de paredes paralelos correspondem a um eixo no espaço. Assim, a partir da corrente gerada em cada parede é possível determinar a direção do movimento acelerado e sua magnitude \cite{Sanjeev2018}.
+				
+				\begin{figure}[h]
+					\centering
+					\includegraphics[keepaspectratio=true,scale=0.8
+					]{figuras/acelerometro.png}
+					\caption{Princípio de funcionamento do acelerômetro.}
+					Fonte adaptada de \cite{Sanjeev2018}
+					\label{acel}
+				\end{figure}
 	
-\end{figure}
-
-
-A vantagem de usar este tipo de IMU é que não será interferido pelo campo magnético externo em torno do
-sensor quando é usado muito próximo de material ferromagnético. Por outro lado, dependendo do acelerômetro e do giroscópio, pode não ser suficiente para aumentar a precisão da medição devido ao ruído dos sensores e à questão do desvio do giroscópio. Os dados adquiridos pelo IMU são integrados como a mostrado na Figura \ref{integracao_imu} \cite{ahmad2013}.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.3
-	]{figuras/integracao_imu.png}
-	\caption{Sensor inercial baseado em 2 sensores}
-	Fonte adaptada de \cite{ahmad2013}
-	\label{integracao_imu}
-	
-\end{figure}
-
-E com essas variáveis adquiridas um padrão de movimento pode ser traçado, e assim podem ser feitas análises sobre a movimentação humana. Assim, junto com a EMG\footnote{Eletromiografia}, o uso de sensores inercias tem sido mais solicitado na área de monitoramento de práticas esportivas\cite{howard2016}.
-
-Porém, a utilização de IMU's com equipamentos de comunicação sem fio, têm mostrado uma certa vantagem sobre o uso de sensores com EMG. Isso ocorre por conta de a integração entre acelerômetros, giroscópios e dispositivos de transmissão sem fio ser mais simplificada do que a aquisição de dados por eletromiógrafos sem fio\cite{howard2016}. 
-
-Os testes que foram feitos com uso de sensores inerciais, segundo  Howard,2016 , foram capazes de produzir dados relacionados com fadiga muscular, performance, postura e velocidade. O que possibilita melhores técnicas de treinamento e até mesmo prevenção de lesão pode ser realizada.
-
-\subsection{Acelerômetro}
-
-O que sensores de movimento são feitos para aferir uma taxa de variação de posição, ou seja o deslocamento que estiver ocorrendo. Assim, se a posição, $x(t)$, de um corpo varia ao longo tempo, então será obtida sua velocidade, $v(t)$,  derivando essa mudança de posição ao longo do tempo. E ao derivar a variação de velocidade ao longo do tempo será calculada a aceleração, $a(t)$, do corpo \cite{moyses2013}.
-\begin{equation}
-v(t) = \frac{dx(t)}{dt}
-\end{equation}
-
-\begin{equation}
-a(t) = \frac{dv(t)}{dt} = \frac{d^2v(t)}{dt^2} 
-\end{equation}
-
-Um acelerômetro é capaz de medir a aceleração, e a partir desse dado é possível obter também a velocidade e posição. Basta fazer a operação inversa a derivada\cite{moyses2013}.
-
-\begin{equation}
-v(t) = v(0) + \int_{0}^{1}(a(t)dt)
-\end{equation}
-\begin{equation}
-x(t) = x(0) + \int_{0}^{1}(v(t)dt)
-\end{equation}
-Acelerômetros podem ser utilizados em muitas áreas, como na  automotiva com air bags, na navegação,no monitoramento de máquinas, na saúde, jogos e outras. São diversos os processos físicos utilizados para desenvolver um sensor para
-medir aceleração. Em aplicações que envolvem voo, aviões e satélites,
-acelerômetros são baseados em propriedades de massas rotativas. Na industria,
-porém, o projeto mais comuns são feitos a partir da combinação da lei de Newton de
-aceleração de massa e a lei de Hooke de ação de mola \cite{carneiro2003}.
-
-O acelerômetro escolhido para esse trabalho funciona a partir do efeito de cristais piezoelétricos, que é o princípio no qual alguns cristais geram uma corrente elétrica como resposta a uma pressão mecânica. Então o sensor acelerômetro  funciona como na Figura \ref{acel} demonstra, como uma pequena caixa com uma esfera dentro, e as paredes são os cristais piezoelétricos.  Sempre que a caixa é alterada de posição a esfera é forçada a se mover em direção de uma das paredes devido a força da gravidade ou de qualquer outra força de aceleração em outro sentido que não a normal. Cada par de paredes paralelos correspondem a um eixo no espaço. Assim, a partir da corrente gerada em cada parede é possível determinar a direção do movimento acelerado e sua magnitude \cite{Sanjeev2018}.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.8
-	]{figuras/acelerometro.png}
-	\caption{Princípio de funcionamento do acelerômetro.}
-	Fonte adaptada de \cite{Sanjeev2018}
-	\label{acel}
-	
-\end{figure}
-
-\subsection{Giroscópio}
-
-Os giroscópios também são sensores de movimento, porém eles não medem aceleração linear como os acelerômetros, eles disponibilizam ao usuário a velocidade angular de um objeto em torno de um eixo. Em geral, os giroscópios feitos com tecnologia MEMS utilizam do efeito Coriolis, no qual um objeto que se encontra em um movimento de rotação, imprime na massa um movimento ortogonal a direção de rotação. Os giroscópios têm um princípio muito mais complexo que os acelerômetros, este e um dos motivos fizeram eles demorarem mais a parecer como dispositivos MEMS \cite{almeida2014}.
-
-O giroscópio do tipo diapasão, modelo utilizado no trabalho, é constituído por duas massas paralelas que oscilam com a mesma amplitude, direção igual e sentidos opostos mostrado na Figura .
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.7
-	]{figuras/diapasao.png}
-	\caption{ Imagem de microscopia eletrônica por varredura de um giroscópio diapasão.}
-	Fonte adaptada de \cite{forhan2010}
-	\label{gyro}	
-\end{figure}
-
-Ao acontecer uma rotação, a força de Coriolis gera uma vibração ortogonal ao sentido do movimento de cada massa. A amplitude desse movimento pode ser medido de forma capacitiva. A utilização de dois giroscópios na mesma direção e em sentidos opostos aumenta a precisão da medição. Com a medida da força de Coriolis  $F_{c}$, a medida da massas paralelas $m$, se movendo a um determinada velocidade $v$, com relação a um referencial fixo que possua uma velocidade angular $ \Omega $ é possível obter a aceleração de Coriolis $a_{c}$. \cite{forhan2010}.
-
-\begin{equation}
-F_{c} = 2mv\Omega
-\end{equation}
-\begin{equation}
-a_{c} = 2v\Omega
-\end{equation}
-
-Com aceleração de Coriolis que é obtido pelo sensor a unidade de processamento do sensor é capaz de calcular a velocidade angular em $\degree$/s. Com a velocidade angular em relação a cada eixo do espaço tridimensional sendo obtida, é possível encontrar posição angular do sensor e do objeto, ou corpo, em que ele estiver acoplado \cite{forhan2010}\cite{moyses2013}. 
-
-A unidade de medida padrão de velocidade angular  é rad/s. Então, com o intuito de converter o valor obtido para o padrão internacional:
-\begin{equation}
-1 \pi rad = 180\degree
-\end{equation}
-
-\begin{equation}
-1 \pi rad /s = 180\degree/s 
-\end{equation}
-
-\begin{equation}
- \frac{\pi}{180} rad /s = (\frac{180}{180})\degree/s 
-\end{equation}
-
-\begin{equation}
-\frac{\pi}{180} rad /s = 1\degree/s 
-\end{equation}
+		\subsection{Giroscópio}
+			
+			Os giroscópios também são sensores de movimento, porém eles não medem aceleração linear como os acelerômetros, eles disponibilizam ao usuário a velocidade angular de um objeto em torno de um eixo. Em geral, os giroscópios feitos com tecnologia MEMS utilizam do efeito Coriolis, no qual um objeto que se encontra em um movimento de rotação, imprime na massa um movimento ortogonal a direção de rotação. Os giroscópios têm um princípio muito mais complexo que os acelerômetros, este e um dos motivos fizeram eles demorarem mais a parecer como dispositivos MEMS \cite{almeida2014}.
+			
+			O giroscópio do tipo diapasão, modelo utilizado no trabalho, é constituído por duas massas paralelas que oscilam com a mesma amplitude, direção igual e sentidos opostos mostrado na Figura .
+			
+			\begin{figure}[h]
+				\centering
+				\includegraphics[keepaspectratio=true,scale=0.7
+				]{figuras/diapasao.png}
+				\caption{ Imagem de microscopia eletrônica por varredura de um giroscópio diapasão.}
+				Fonte adaptada de \cite{forhan2010}
+				\label{gyro}	
+			\end{figure}
+			
+			Ao acontecer uma rotação, a força de Coriolis gera uma vibração ortogonal ao sentido do movimento de cada massa. A amplitude desse movimento pode ser medido de forma capacitiva. A utilização de dois giroscópios na mesma direção e em sentidos opostos aumenta a precisão da medição. Com a medida da força de Coriolis  $F_{c}$, a medida da massas paralelas $m$, se movendo a um determinada velocidade $v$, com relação a um referencial fixo que possua uma velocidade angular $ \Omega $ é possível obter a aceleração de Coriolis $a_{c}$. \cite{forhan2010}.
+			
+			\begin{equation}
+			F_{c} = 2mv\Omega
+			\end{equation}
+			
+			\begin{equation}
+			a_{c} = 2v\Omega
+			\end{equation}
+			
+			Com aceleração de Coriolis que é obtido pelo sensor a unidade de processamento do sensor é capaz de calcular a velocidade angular em $\degree$/s. Com a velocidade angular em relação a cada eixo do espaço tridimensional sendo obtida, é possível encontrar posição angular do sensor e do objeto, ou corpo, em que ele estiver acoplado \cite{forhan2010}\cite{moyses2013}. 
+			
+			A unidade de medida padrão de velocidade angular  é rad/s. Então, com o intuito de converter o valor obtido para o padrão internacional:
+			
+			\begin{equation}
+			1 \pi rad = 180\degree
+			\end{equation}
+			
+			\begin{equation}
+			1 \pi rad /s = 180\degree/s 
+			\end{equation}
+			
+			\begin{equation}
+			 \frac{\pi}{180} rad /s = (\frac{180}{180})\degree/s 
+			\end{equation}
+			
+			\begin{equation}
+			\frac{\pi}{180} rad /s = 1\degree/s 
+			\end{equation}
 
 %Os giroscópios são similares em operação aos acelerômetros; no entanto, eles são usados ​​para detectar a velocidade angular, geralmente com uma saída de graus por segundo. Essa funcionalidade os torna muito úteis em conjunto com acelerômetros para um sistema que requer rastreamento de movimento confiável.
 
@@ -220,7 +220,7 @@ Existem diversos modelos de placas Arduino no mercado, as mais utilizadas são L
 	\end{tabular}
 \end{table}
 
-O  modelo escolhido para este projeto foi o Arduino Nano, mostrado na Figura , pois mesmo sendo apenas um protótipo, haverá a necessidade de que o tamanho do IMU seja reduzido para facilitar a fixação em diversas partes do corpo e o custo financeiro\footnote{Preços pesquisados em lojas de Brasília.} para desenvolvimento do protótipo foi levado em consideração.
+O  modelo escolhido para este projeto foi o Arduino Nano, mostrado na Figura \ref{arduino} , pois mesmo sendo apenas um protótipo, haverá a necessidade de que o tamanho do IMU seja reduzido para facilitar a fixação em diversas partes do corpo e o custo financeiro\footnote{Preços pesquisados em lojas de Brasília.} para desenvolvimento do protótipo foi levado em consideração.
 
 \begin{figure}[h]
 	\centering
@@ -228,7 +228,7 @@ O  modelo escolhido para este projeto foi o Arduino Nano, mostrado na Figura , p
 	]{figuras/arduino_nano.png}
 	\caption{ Arduino Nano }
 	Fonte adaptada de \cite{john2018}
-	\label{arduno}	
+	\label{arduino}	
 \end{figure}
 
 
@@ -257,6 +257,8 @@ Além disso, é uma linguagem de propósito geral. Muitas vezes, é necessário 
 Nesta seção será apresentado quais foram os materiais e métodos utilizados para implementação do projeto, tanto da parte de hardware(parte de física) quanto a parte de software. 
 \section{Projeto de Hardware}
 
+
+ 
 	\subsection{Materiais Utilizados}
 		\begin{itemize}
 			
@@ -265,11 +267,69 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 			\item Fios(\textit{jumpers};
 			\item Cabo USB;
 			\item Computador com Arduino IDE e Python instalados;
+			\item Protoboard
 			
-		\end{itemize}	 
-
+		\end{itemize}	
+	 
+	\subsection{Métodos}
+		
+		Para realizar a comunicação do sensor MPU6050 com o Arduino foi feita a conexão conforme o esquemático mostrado na Figura \ref{conexoes}, logo abaixo, onde os pinos Vcc e Gnd do MPU6050, responsáveis por ligar do sensor, foram conectados aos pinos 5V e Gnd do Arduino, o pino SDA\footnote{Pino de transferência de dados} foi conectado ao pino SDA do Arduino, que também é o pino de entrada analógica A4 e o pino SCL\footnote{Pino de sincronização do \textit{clock}} ao pino SCL do Arduino, que também é o pino de entrada analógica A5.  
+		
+		Para os primeiros testes foi utilizada um \textit{protoboard} para facilitar as conexões, pois ela permite que os componentes sejam conectado sem a necessidade de solda entre eles. Mas em um segundo momento para os teste de movimento serem realizados com maior acurácia, houve a necessidade de retirar os componentes da \textit{protoboard} e soldá-los em um placa furada de cobre, e isso faria o ruído devido a conexões instáveis fosse menor.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=0.35]{figuras/conexoes_mpu_arduino.png}
+			\caption{ Esquemático de conexão do MPU6050 com Arduino Nano }
+			Fonte: autoria própria. \footnotesize
+			\label{conexoes}	
+		\end{figure}
+		
+		A comunicação entre o sensor MPU6050 e o Arduino foi realizada através do protocolo I2C, onde os dados eram enviados de forma serial através de apenas um fio e os dados organizados como mostrado na Figura \ref{comunicacao}, onde é evidenciado quais são os dados transmitidos do MPU6050 para o Arduino e a velocidade do \textit{clock}, e Figura \ref{i2c}, que mostra com mais detalhe a relação dos dados com o \textit{clock} .
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=0.35]{figuras/comunicacao.png}
+			\caption{ Transmissão de dados do MPU6050 para Arduino}
+			Fonte: autoria própria. 
+			\label{comunicacao}	
+		\end{figure}
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/i2c.png}
+			\caption{Transferência de dados com o protocolo I2C. }
+			Fonte: \cite{mpu6050}. 
+			\label{i2c}	
+		\end{figure}
+	
+		O Arduino Nano foi conectado ao computador por meio de um cabo USB 2.0, que além de ser responsável pela comunicação, também era por meio dele que era realizada a alimentação de energia com 5V de tensão. O protocolo de comunicação utilizado com um cabo USB também serial. Então os dados transmitidos do Arduino para o computador são enviados em série. 
+		
+		
 \section {Projeto de Software}
-
+		
+		Para esse projeto foram necessários dois projetos de softwares, um para ficar salvo no Arduino e outro que será o software, em Python, responsável por fazer o tratamento dos dados adquiridos do sensor e salva-los para análises futuras.
+		
+		\subsection{Software para o Arduino}
+			Os requisitos do software salvo no microcontrolador são:
+			\begin{itemize}
+				\item Inicializar o MPU6050;
+				\item Receber os dados do MPU6050; 
+				\item Enviar os dados para interface serial.
+			\end{itemize}
+		
+		Para isso foi utilizada a biblioteca \textit{Wire}, que é responsável por realizar a comunicação em I2C, enviando o comando de inicialização, a variável escolhida pelo usuário para definir os limites de leitura do acelerômetro e do giroscópio e é esta biblioteca que realiza a leitura dos registradores que tem o valor de cada sensor armazenado. 
+		
+		O fluxograma do software responsável pela leitura dos dados do MPU6050 e envio para a interface de comunicação serial é o mostrado na Figura \ref{fluxograma_arduino}.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=0.8]{figuras/diagrama_embarcado.png}
+			\caption{Fluxograma do software de leitura dos dados. }
+			Fonte: autoria própria. 
+			\label{fluxograma_arduino}	
+		\end{figure}
+		
 \section {Validação}
 
 \chapter{Resultados e Discussão}
