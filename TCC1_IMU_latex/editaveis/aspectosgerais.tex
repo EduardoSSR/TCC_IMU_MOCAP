@@ -116,14 +116,14 @@ Nesta seção do artigo serão explicados conceitos importantes para realizaçã
 				\label{gyro}	
 			\end{figure}
 			
-			Ao acontecer uma rotação, a força de Coriolis gera uma vibração ortogonal ao sentido do movimento de cada massa. A amplitude desse movimento pode ser medido de forma capacitiva. A utilização de dois giroscópios na mesma direção e em sentidos opostos aumenta a precisão da medição. Com a medida da força de Coriolis  $F_{c}$, a medida da massas paralelas $m$, se movendo a um determinada velocidade $v$, com relação a um referencial fixo que possua uma velocidade angular $ \Omega $ é possível obter a aceleração de Coriolis $a_{c}$. \cite{forhan2010}.
+			Ao acontecer uma rotação, a força de Coriolis gera uma vibração ortogonal ao sentido do movimento de cada massa. A amplitude desse movimento pode ser medido de forma capacitiva. A utilização de dois giroscópios na mesma direção e em sentidos opostos aumenta a precisão da medição. Com a medida da força de Coriolis  $F_{c}$, a medida da massas paralelas $m$, se movendo a um determinada velocidade $v$, com relação a um referencial fixo que possua uma velocidade angular $ \omega $ é possível obter a aceleração de Coriolis $a_{c}$. \cite{forhan2010}.
 			
 			\begin{equation}
-			F_{c} = 2mv\Omega
+			F_{c} = 2mv\omega
 			\end{equation}
 			
 			\begin{equation}
-			a_{c} = 2v\Omega
+			a_{c} = 2v\omega
 			\end{equation}
 			
 			Com aceleração de Coriolis que é obtido pelo sensor a unidade de processamento do sensor é capaz de calcular a velocidade angular em $\degree$/s. Com a velocidade angular em relação a cada eixo do espaço tridimensional sendo obtida, é possível encontrar posição angular do sensor e do objeto, ou corpo, em que ele estiver acoplado \cite{forhan2010}\cite{moyses2013}. 
@@ -273,13 +273,30 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 	 
 	\subsection{Métodos}
 		
-		Para realizar a comunicação do sensor MPU6050 com o Arduino foi feita a conexão conforme o esquemático mostrado na Figura \ref{conexoes}, logo abaixo, onde os pinos Vcc e Gnd do MPU6050, responsáveis por ligar do sensor, foram conectados aos pinos 5V e Gnd do Arduino, o pino SDA\footnote{Pino de transferência de dados} foi conectado ao pino SDA do Arduino, que também é o pino de entrada analógica A4 e o pino SCL\footnote{Pino de sincronização do \textit{clock}} ao pino SCL do Arduino, que também é o pino de entrada analógica A5.  
+		Para realizar a comunicação do sensor MPU6050 com o Arduino foi feita a conexão conforme o esquemático mostrado na Figura \ref{conexoes} e a Tabela \ref{conexoes_arduino} , logo abaixo, onde os pinos Vcc e Gnd do MPU6050, responsáveis por ligar do sensor, foram conectados aos pinos 5V e Gnd do Arduino, o pino SDA\footnote{Pino de transferência de dados} foi conectado ao pino SDA do Arduino, que também é o pino de entrada analógica A4 e o pino SCL\footnote{Pino de sincronização do \textit{clock}} ao pino SCL do Arduino, que também é o pino de entrada analógica A5.  
 		
 		Para os primeiros testes foi utilizada um \textit{protoboard} para facilitar as conexões, pois ela permite que os componentes sejam conectado sem a necessidade de solda entre eles. Mas em um segundo momento para os teste de movimento serem realizados com maior acurácia, houve a necessidade de retirar os componentes da \textit{protoboard} e soldá-los em um placa furada de cobre, e isso faria o ruído devido a conexões instáveis fosse menor.
+		\begin{table}[h] \footnotesize
+			\centering
+			\caption{Conexões entre Arduino e MPU6050}
+			\label{conexoes_arduino}
+			
+			\begin{tabular}{cc}
+				\toprule
+				\textbf{Arduino} & \textbf{MPU6050} \\
+				\midrule
+				5V & VCC \\
+				GND & GND \\
+				A4 & SDA \\
+				A5 & SCL \\
+				\bottomrule
+				Fonte: & autoria própria
+			\end{tabular}
+		\end{table}
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[keepaspectratio=true,scale=0.35]{figuras/conexoes_mpu_arduino.png}
+			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/conexoes_mpu_arduino.png}
 			\caption{ Esquemático de conexão do MPU6050 com Arduino Nano }
 			Fonte: autoria própria. \footnotesize
 			\label{conexoes}	
@@ -289,7 +306,7 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[keepaspectratio=true,scale=0.35]{figuras/comunicacao.png}
+			\includegraphics[keepaspectratio=true,scale=0.4]{figuras/comunicacao.png}
 			\caption{ Transmissão de dados do MPU6050 para Arduino}
 			Fonte: autoria própria. 
 			\label{comunicacao}	
