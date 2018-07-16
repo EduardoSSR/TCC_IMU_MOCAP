@@ -95,7 +95,7 @@ Nesta seção do artigo serão explicados conceitos importantes para realizaçã
 				\begin{figure}[h]
 					\centering
 					\includegraphics[keepaspectratio=true,scale=0.8
-					]{figuras/acelerometro.png}
+					]{figuras/acelerometro.PNG}
 					\caption{Princípio de funcionamento do acelerômetro.}
 					Fonte adaptada de \cite{Sanjeev2018}
 					\label{acel}
@@ -296,7 +296,7 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/conexoes_mpu_arduino.png}
+			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/conexoes_mpu_arduino.PNG}
 			\caption{ Esquemático de conexão do MPU6050 com Arduino Nano }
 			Fonte: autoria própria. \footnotesize
 			\label{conexoes}	
@@ -306,7 +306,7 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[keepaspectratio=true,scale=0.4]{figuras/comunicacao.png}
+			\includegraphics[keepaspectratio=true,scale=0.4]{figuras/comunicacao.PNG}
 			\caption{ Transmissão de dados do MPU6050 para Arduino}
 			Fonte: autoria própria. 
 			\label{comunicacao}	
@@ -314,7 +314,7 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/i2c.png}
+			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/i2c.PNG}
 			\caption{Transferência de dados com o protocolo I2C. }
 			Fonte: \cite{mpu6050}. 
 			\label{i2c}	
@@ -335,17 +335,28 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 				\item Enviar os dados para interface serial.
 			\end{itemize}
 		
-		Para isso foi utilizada a biblioteca \textit{Wire}, que é responsável por realizar a comunicação em I2C, enviando o comando de inicialização, a variável escolhida pelo usuário para definir os limites de leitura do acelerômetro e do giroscópio e é esta biblioteca que realiza a leitura dos registradores que tem o valor de cada sensor armazenado. 
+		Para isso foi utilizada as bibliotecas \textit{Wire.h},\textit{I2Cdev.h} e \textit{MPU6050.h}, que são responsaveis por realizar a comunicação em I2C, enviar o comando de inicialização, a variável escolhida pelo usuário para definir os limites de leitura do acelerômetro e do giroscópio, e são estas bibliotecas que realizam a leitura dos registradores que tem o valor de cada sensor armazenado neles.  
 		
-		O fluxograma do software responsável pela leitura dos dados do MPU6050 e envio para a interface de comunicação serial é o mostrado na Figura \ref{fluxograma_arduino}.
+		O fluxograma do software responsável pela leitura dos dados do MPU6050 e envio para a interface de comunicação serial é o mostrado na Figura \ref{fluxograma_arduino}. 
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[keepaspectratio=true,scale=0.8]{figuras/diagrama_embarcado.png}
+			\includegraphics[keepaspectratio=true,scale=0.8]{figuras/diagrama_embarcado.PNG}
 			\caption{Fluxograma do software de leitura dos dados. }
 			Fonte: autoria própria. 
 			\label{fluxograma_arduino}	
 		\end{figure}
+		
+		Para realizar a transmissão dos dados do Arduino para o programa em Python, o programa salvo no Arduino imprime no terminal serial os dados obtidos do sensor. O programa é fechado sempre que uma nova leitura é realizada.
+		 
+\subsection{Software para Salvar os Dados}
+		Esse segundo programa, foi feito para realizar a leitura dos dados transmitidos pelo Arduino, e salvar-los em um arquivo de texto, para futuras análises. Esse software ainda da a possibilidade do usuário salvar os dados sem nenhum tratamento ou os valores com medidas físicas aproximadas das medições realizadas. 
+		
+		O software foi escrito em Python 3 e compilado com o Jupyter Notebook e com a IDE Spyder, os dois compiladores são do pacote Anaconda. 
+		
+		O programa inicia mostrando a lista de dispositivos USB conectados ao computador, se não houver nenhum dispositivo conectado aparece a mensagem "Conecte o Arduino", se houver, a mesagem que aparece pede para digitar o número correspondente ao dispositivo que o usuário pretende verificar os dados. 
+		
+		Após a escolha do Arduino, o usuário deve escolher entre as 4 possibilidades de escala dos dados obtidos. E em seguida pressionar "enter" para iniciar a leitura e "Ctrl+C"\footnote{No Jupyter Notebook o "Ctrl+C" não funcionou, precisando assim pressionar o ícone de \textit{"stop"} disponível na tela.} para pausar e salvar os valores. O programa então imprime na tela os valores dos sensores que estão sendo lidos e ao fim do código, quando o usuário pressionar "Ctrl+C", os valores são salvos em um arquivo com a data de quando foi finalizada a leitura.
 		
 \section {Validação}
 
