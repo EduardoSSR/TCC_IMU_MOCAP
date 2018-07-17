@@ -169,10 +169,10 @@ def main():
             plt.show()
            
             
-            plt.plot(gyroX, "-r")
-            plt.plot(gyroY, "-g")
-            plt.plot(gyroZ, "-b")
-            plt.show()
+#            plt.plot(gyroX, "-r")
+ #           plt.plot(gyroY, "-g")
+  #          plt.plot(gyroZ, "-b")
+   #         plt.show()
             # x = np.vstack((read1,read2,read3,read4,read5,read6,read7))
            # np.savetxt('Dados_%s.csv'%(str(now)[:-7]), np.transpose(x), delimiter=';')  
             break
