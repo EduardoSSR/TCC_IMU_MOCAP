@@ -254,7 +254,10 @@ Além disso, é uma linguagem de propósito geral. Muitas vezes, é necessário 
 
 \chapter[Metodologia]{Metodologia}
 
-Nesta seção será apresentado quais foram os materiais e métodos utilizados para implementação do projeto, tanto da parte de hardware(parte de física) quanto a parte de software. 
+Nesta seção será apresentado quais foram os materiais e métodos utilizados para implementação do projeto, tanto da parte de hardware(parte de física) quanto a parte de software. A principal metodologia utilizada foi baseada  em scrum, que é um método ágil iterativo incremental, onde o projeto foi divido em ciclos de 15 dias chamados de "\textit{sprints}". A cada \textit{sprint}, algumas atividades são retiradas do \textit{backlog}\footnote{Conjunto de requisitos que ainda não foram solucionados.}, colocadas no campo "\textit{do}"\footnote{Campo onde estão as atividades a serem realizadas durante a \textit{sprint}.}  e tem de ser resolvidas até a o início da próxima \textit{sprint}, onde as atividade realizadas serão avaliadas,  validadas ou não, se estiverem atendendo ao requisito são enviadas para o "\textit{done}"\footnote{Conjunto de atividades que já foram feitas e validadas}, se não estiverem atendendo as necessidades, elas voltam ao \textit{backlog} ou para o \textit{do}.
+
+Os resquisitos do projeto, que compuseram o backlog e definiram os objetivos desse projeto foram relacionados com o auxílio dos pesquisadores do Laboratório de Informática e Saúde e alunos de mestrado da UnB.
+
 \section{Projeto de Hardware}
 
 
@@ -356,10 +359,28 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 		
 		O programa inicia mostrando a lista de dispositivos USB conectados ao computador, se não houver nenhum dispositivo conectado aparece a mensagem "Conecte o Arduino", se houver, a mesagem que aparece pede para digitar o número correspondente ao dispositivo que o usuário pretende verificar os dados. 
 		
-		Após a escolha do Arduino, o usuário deve escolher entre as 4 possibilidades de escala dos dados obtidos. E em seguida pressionar "enter" para iniciar a leitura e "Ctrl+C"\footnote{No Jupyter Notebook o "Ctrl+C" não funcionou, precisando assim pressionar o ícone de \textit{"stop"} disponível na tela.} para pausar e salvar os valores. O programa então imprime na tela os valores dos sensores que estão sendo lidos e ao fim do código, quando o usuário pressionar "Ctrl+C", os valores são salvos em um arquivo com a data de quando foi finalizada a leitura.
+		Após a escolha do Arduino, o usuário deve escolher entre as 4 possibilidades de escala dos dados obtidos. E em seguida pressionar "enter" para iniciar a leitura e "Ctrl+C"\footnote{No Jupyter Notebook o "Ctrl+C" não funcionou, precisando assim pressionar o ícone de \textit{"stop"} disponível na tela.} para pausar e salvar os valores. O programa então imprime na tela os valores dos sensores que estão sendo lidos e ao fim do código, quando o usuário pressionar "Ctrl+C", os valores são salvos em um arquivo nomeados com a data de quando foi finalizada a leitura.
+		\textit{USER HISTORY}
+		\textit{FLUXOGRAMA} 
 		
 \section {Validação}
 
+	Para testar o funcionamento dos acelerômetros do IMU, foi feito um teste simples. Pois o sempre que o sensor estiver "parado", ele estará sobre efeito da força peso e consequentemente da aceleração da gravidade de aproximadamente 9,8 m/$ s^2 $. Então para verificar, foi necessário testar o sensor com um eixo de cada vez alinhado com a normal, como na seguinte Figura .
+	
+	Após realizar as leitura, os dados foram plotados em um gráfico simples, onde o eixo horizontal representa o tempo e o vertical a aceleração medida. Foram colocados os gráficos dos 3 eixos na mesma imagem. 
+	
+	Para verificar o funcionamento do MPU6050  e se as leituras são confiáveis ou não serão necessários muitos outros teste além dos realizados até o momento.
+	
+	\textit{ESTUDO DE CASO}
+	
+	
+	
 \chapter{Resultados e Discussão}
-
+	
+	\textit{RESULTADOS:Fotos microcontrolador; fotos imu; gráficos; programas;ARQUIVOS SALVOS.}
+		
+	\textit{DISCUSSÃO: tempo para desenvolver interface gráfica. responder o porque dos erros, e o porque das escolhas. Ruído devido ao movimento do próprio corpo humano. 	
+	}
 \chapter{Conclusão}
+
+	\textit{Feito protótipo, software para pesquisador, próximas etapas: case miniaturizado, comunicação sem fio.}
