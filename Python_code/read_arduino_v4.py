@@ -161,17 +161,20 @@ def main():
             print ("Voce pressionou Ctrl+C para interromper este programa! Seus dados foram salvos em 'Dados_%s.csv'"%(str(now)[:-7]))
 
             ser.close()
-            #plt.plot(acelX, '-r')
             
             plt.plot(acelX, "-r")
             plt.plot(acelY, "-g")
             plt.plot(acelZ, "-b")
+            plt.xlabel('Tempo (ms)');
+            plt.ylabel('Aceleração (m/s²)');
             plt.show()
            
             
 #            plt.plot(gyroX, "-r")
  #           plt.plot(gyroY, "-g")
   #          plt.plot(gyroZ, "-b")
+  #          plt.xlabel('Tempo (ms)');
+  #          plt.ylabel('Velocidade Angular (°/s)');
    #         plt.show()
             # x = np.vstack((read1,read2,read3,read4,read5,read6,read7))
            # np.savetxt('Dados_%s.csv'%(str(now)[:-7]), np.transpose(x), delimiter=';')  
