@@ -270,7 +270,10 @@ Os resquisitos do projeto, que compuseram o backlog e definiram os objetivos des
 			\item Fios(\textit{jumpers};
 			\item Cabo USB;
 			\item Computador com Arduino IDE e Python instalados;
-			\item Protoboard
+			\item Jupyter Notebook;
+			\item Tiras de velcro;
+			\item Cabo flat (8 fios);
+			\item Protoboard.
 			
 		\end{itemize}	
 	 
@@ -344,7 +347,7 @@ Os resquisitos do projeto, que compuseram o backlog e definiram os objetivos des
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[keepaspectratio=true,scale=0.8]{figuras/diagrama_embarcado.PNG}
+			\includegraphics[keepaspectratio=true,scale=0.9]{figuras/diagrama_embarcado.PNG}
 			\caption{Fluxograma do software de leitura dos dados. }
 			Fonte: autoria própria. 
 			\label{fluxograma_arduino}	
@@ -359,9 +362,16 @@ Os resquisitos do projeto, que compuseram o backlog e definiram os objetivos des
 		
 		O programa inicia mostrando a lista de dispositivos USB conectados ao computador, se não houver nenhum dispositivo conectado aparece a mensagem "Conecte o Arduino", se houver, a mesagem que aparece pede para digitar o número correspondente ao dispositivo que o usuário pretende verificar os dados. 
 		
-		Após a escolha do Arduino, o usuário deve escolher entre as 4 possibilidades de escala dos dados obtidos. E em seguida pressionar "enter" para iniciar a leitura e "Ctrl+C"\footnote{No Jupyter Notebook o "Ctrl+C" não funcionou, precisando assim pressionar o ícone de \textit{"stop"} disponível na tela.} para pausar e salvar os valores. O programa então imprime na tela os valores dos sensores que estão sendo lidos e ao fim do código, quando o usuário pressionar "Ctrl+C", os valores são salvos em um arquivo nomeados com a data de quando foi finalizada a leitura.
+		Após a escolha do Arduino, o usuário deve escolher entre as 4 possibilidades de escala dos dados obtidos. E em seguida pressionar "enter" para iniciar a leitura e "Ctrl+C"\footnote{No Jupyter Notebook o "Ctrl+C" não funcionou, precisando assim pressionar o ícone de \textit{"stop"} disponível na tela.} para pausar e salvar os valores. O programa então imprime na tela os valores dos sensores que estão sendo lidos e ao fim do código, quando o usuário pressionar "Ctrl+C", os valores são salvos em dois arquivos nomeados com a data de quando foi finalizada a leitura, como mostrado na Figura \ref{fluxograma_python} .
 		\textit{USER HISTORY}
 		\textit{FLUXOGRAMA} 
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio=true,scale=1]{figuras/diagrama_python.png}
+			\caption{Fluxograma do software que salva os dados lidos. }
+			Fonte: autoria própria. 
+			\label{fluxograma_python}	
+		\end{figure}
 		
 \section {Validação}
 
