@@ -414,7 +414,15 @@ Os resquisitos do projeto, que compuseram o backlog e definiram os objetivos des
 		
 \section {Validação}
 
-	Para testar o funcionamento dos acelerômetros do IMU, foi feito um teste simples. Pois o sempre que o sensor estiver "parado", ele estará sobre efeito da força peso e consequentemente da aceleração da gravidade de aproximadamente 9,8 m/$ s^2 $. Então para verificar, foi necessário testar o sensor com um eixo de cada vez alinhado com a normal, como na seguinte Figura .
+	Para testar o funcionamento dos acelerômetros do IMU, foi feito um teste simples. Pois o sempre que o sensor estiver "parado", ele estará sobre efeito da força peso e consequentemente da aceleração da gravidade de aproximadamente 9,8 m/$ s^2 $. Então para verificar, foi necessário testar o sensor com um eixo de cada vez alinhado com a normal, como na Figura \ref{acel_validation}, onde a imagem mais a direita mostra o MPU6050 com do eixo X paralelo a Normal, a imagem a direita com o eixo Y paralelo a Normal e ao centro o eixo Z.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio=true,scale=1]{figuras/validacao_acel.PNG}
+		\caption{Demonstração da posição do sensor}
+		Fonte: autoria própria. 
+		\label{acel_validation}	
+	\end{figure}
 	
 	Após realizar as leitura, os dados foram plotados em um gráfico simples, onde o eixo horizontal representa o tempo e o vertical a aceleração medida. Foram colocados os gráficos dos 3 eixos na mesma imagem. 
 	
