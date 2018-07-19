@@ -235,7 +235,7 @@ Existem diversos modelos de placas Arduino no mercado, sendo as mais utilizadas 
 	\end{tabular}
 \end{table}
 
-O  modelo escolhido para este projeto foi o Arduino Nano, mostrado na Figura \ref{arduino}, pois mesmo sendo apenas um protótipo, haverá a necessidade de que o tamanho do IMU seja reduzido para facilitar a fixação em diversas partes do corpo e o custo financeiro\footnote{Preços pesquisados em lojas de Brasília.} para desenvolvimento do protótipo foi levado em consideração.
+O Arduino Nano(Figura \ref{arduino}) tem funcionalidades muito semelhantes às do Arduino Duemilanove, mas com um formato diferente. O Nano possui o microcontrolador ATmega328P embutido nele, o mesmo que o Arduino UNO. A principal diferença entre eles é que a placa UNO é apresentada em formato PDIP(\textit{Plastic Dual-In-line Package}) com 30 pinos e Nano está disponível em PQFP(\textit{Plastic Quad Flat Pack}) com 32 pinos. Os 2 pinos extras do Arduino Nano servem para as funcionalidades do ADC, enquanto o UNO possui 6 portas ADC, o Nano possui 8. A placa Nano não vem com um conector para fonte DC(\textit{Direct Current} - Corrente Contínua) como outras placas Arduino, mas possui uma porta mini-USB. Esta porta é usada para programação, monitoramento serial e alimentação de energia, se necessário. A característica fascinante do Nano é que ele escolherá a fonte de energia mais forte com sua diferença de potencial, e o \textit{jumper} de seleção de fonte de energia é inválido \cite{john2018}.  
 
 \begin{figure}[h]
 	\centering
@@ -245,9 +245,6 @@ O  modelo escolhido para este projeto foi o Arduino Nano, mostrado na Figura \re
 	Fonte: \cite{john2018}
 	\label{arduino}	
 \end{figure}
-
-
-O Arduino Nano tem funcionalidades muito semelhantes às do Arduino Duemilanove, mas com um formato diferente. O Nano possui o microcontrolador ATmega328P embutido nele, o mesmo que o Arduino UNO. A principal diferença entre eles é que a placa UNO é apresentada em formato PDIP(\textit{Plastic Dual-In-line Package}) com 30 pinos e Nano está disponível em PQFP(\textit{Plastic Quad Flat Pack}) com 32 pinos. Os 2 pinos extras do Arduino Nano servem para as funcionalidades do ADC, enquanto o UNO possui 6 portas ADC, o Nano possui 8. A placa Nano não vem com um conector para fonte DC(\textit{Direct Current} - Corrente Contínua) como outras placas Arduino, mas possui uma porta mini-USB. Esta porta é usada para programação, monitoramento serial e alimentação de energia, se necessário. A característica fascinante do Nano é que ele escolherá a fonte de energia mais forte com sua diferença de potencial, e o \textit{jumper} de seleção de fonte de energia é inválido \cite{john2018}.  
 
 Para se comunicar com qualquer microcontrolador ou computador, é necessário usar uma linguagem de programação. No caso do Arduino, é necessário usar a linguagem C++\footnote{Com alguma modificações}, que é uma linguagem tradicional e já bastante conhecida. Porém, essa linguagem ainda não é a que a máquina compreende, é uma linguagem de alto nível, e para a máquina compreendê-la é necessário o uso de um compilador, que converte a linguagem de alto nível para a linguagem de máquina. Em geral, para compilar um programa, é necessário a utilização de um IDE(\textit{Integrated Development Environment} - Ambiente de Desenvolvimento Integrado), um aplicativo de computador que possui um compilador integrado. A plataforma do Arduino utiliza o Arduino IDE \cite{chavier2016}. 
 
@@ -290,7 +287,12 @@ Os resquisitos do projeto, que compuseram o \textit{backlog} e definiram os obje
 		
 		Para realizar a comunicação do sensor MPU6050 com o Arduino foi feita a conexão conforme o esquemático mostrado na Figura \ref{conexoes} e a Tabela \ref{conexoes_arduino}. Logo abaixo, onde os pinos Vcc e Gnd do MPU6050, responsáveis por ligar do sensor, foram conectados aos pinos 5V e Gnd do Arduino. O pino SDA\footnote{Pino de transferência de dados} foi conectado ao pino SDA do Arduino, que também é o pino de entrada analógica A4 e o pino SCL\footnote{Pino de sincronização do \textit{clock}} ao pino SCL do Arduino, que também é o pino de entrada analógica A5.  
 		
+		O  modelo escolhido para este projeto foi o Arduino Nano, pois mesmo sendo apenas um protótipo, haverá a necessidade de que o tamanho do IMU seja reduzido para facilitar a fixação em diversas partes do corpo e o custo financeiro\footnote{Preços pesquisados em lojas de Brasília.} para desenvolvimento do protótipo foi levado em consideração.
+		
 		Para os primeiros testes foi utilizada um \textit{protoboard} para facilitar as conexões, pois ela permite que os componentes sejam conectado sem a necessidade de solda entre eles. Mas em um segundo momento para os teste de movimento serem realizados com maior acurácia, houve a necessidade de retirar os componentes da \textit{protoboard} e soldá-los em uma placa furada de cobre, e isso faria o ruído devido a conexões instáveis fosse menor.
+		
+		O sensor foi fixado em uma faixa de velcro, para permitir a fixação do IMU em diversas partes do corpo, e para conectá-lo ao Arduino foi soldado ao sensor um cabo \textit{flat} com 8 fios.
+		
 		\begin{table}[h] \footnotesize
 			\centering
 			\caption{Conexões entre Arduino e MPU6050}
@@ -373,7 +375,7 @@ Os resquisitos do projeto, que compuseram o \textit{backlog} e definiram os obje
 		
 		Após a escolha do Arduino, o usuário deve escolher entre as 4 possibilidades de escala dos dados obtidos. E em seguida pressionar " enter "\ para iniciar a leitura e "Ctrl+C"\footnote{No \textit{Jupyter Notebook} o "Ctrl+C" não funcionou, precisando assim pressionar o ícone de \textit{"stop"} disponível na tela.} para pausar e salvar os valores. O programa então imprime na tela os valores dos sensores que estão sendo lidos e ao fim do código, quando o usuário pressionar "Ctrl+C", os valores são salvos em dois arquivos nomeados com a data de quando foi finalizada a leitura, como mostrado na Figura \ref{fluxograma_python}.
 		
-		Para definir melhor os requisitos do \textit{software}, foi feita a seguinte história de usuário descrita na Tabela \ref{User_story}.
+		Para definir melhor os requisitos do \textit{software}, foi feita a seguinte história de usuário descrita na Tabela \ref{User_story}, e a partir dela foi possível desenvolver o \textit{software} inicial e com ele realizar os testes preliminares do protótipo.
 		
 			\begin{table}[h] \footnotesize
 			\centering
@@ -414,11 +416,11 @@ Os resquisitos do projeto, que compuseram o \textit{backlog} e definiram os obje
 		
 \section {Validação}
 
-	Para testar o funcionamento dos acelerômetros do IMU, foi feito um teste simples. Pois sempre que o sensor estiver "parado", ele estará sobre efeito da força do peso e consequentemente da aceleração da gravidade de aproximadamente 9,8 m/$ s^2 $. Então para verificar, foi necessário testar o sensor com um eixo de cada vez alinhado com a normal, como na Figura \ref{acel_validation}, onde a imagem mais a direita mostra o MPU6050 com do eixo X paralelo a Normal, a imagem a direita com o eixo Y paralelo a Normal e ao centro o eixo Z.
+	Para testar o funcionamento dos acelerômetros do IMU, foi feito um teste simples. Pois sempre que o sensor estiver "parado", ele estará sobre efeito da força do peso e consequentemente da aceleração da gravidade de aproximadamente 9,8 m/$ s^2 $. Então para verificar, foi necessário testar o sensor com um eixo de cada vez alinhado com a Normal, como na Figura \ref{acel_validation}, onde a imagem mais à direita mostra o MPU6050 com do eixo X paralelo a Normal, a imagem à direita com o eixo Y paralelo a Normal e ao centro o eixo Z.
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[keepaspectratio=true,scale=1]{figuras/validacao_acel.PNG}
+		\includegraphics[keepaspectratio=true,scale=0.8]{figuras/validacao_acel.PNG}
 		\caption{Demonstração da posição do sensor}
 		Fonte: autoria própria. 
 		\label{acel_validation}	
@@ -432,19 +434,21 @@ Os resquisitos do projeto, que compuseram o \textit{backlog} e definiram os obje
 	
 	
 \chapter{Resultados e Discussão}
-	\section{Resultados Preliminares}
-	\textit{RESULTADOS:Fotos microcontrolador; fotos imu; gráficos; programas;ARQUIVOS SALVOS.}\\
+	\section{Resultados Parciais}
 	
-	Os gráficos apresentados na Figura \ref{acelx_0}, mostram o resultado do teste para medir a aceleração da gravidade com cada um dos 3 acelerômetros.
+	Os resultados obtidos até o momento são parciais. E foram os seguintes resultados: protótipo funcional, \textit{case} para fixação\footnote{Ainda não é a definitiva}, \textit{software} para o microcontrolador, \textit{software} para ler, tratar e salvar os dados, tabelas e gráficos parciais do funcionamento do IMU.
+	 
+	Os gráficos apresentados na Figura \ref{acelx_0}, mostram o resultado parcial do teste para medir a aceleração da gravidade com cada um dos 3 acelerômetros. É possível a partir deles verificar que os acelerômetros estão obtendo valores realistas para as medidas feitas, pois todos os gráficos apresentaram um valor muito próximo ao da aceleração da gravidade. Os gráficos ainda não estão com aspecto ideal, dando a sensação de presença de ruido, mas isso pode ser corrigido com um \textit{buffer} para carregar um quantidade os valores e mostrar apenas a média deles, porque o sensor é muito sensível a pequenas variações de aceleração.   
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/graficos_acel.png}
 		\caption{Gráficos com os 3 Eixos alinhados com a Normal.}
-		Na imagem esquerda o Eixo X está alinhado, a direita o Eixo Y e ao centro o Eixo Z. \footnotesize
+		Na imagem à esquerda o Eixo X está alinhado, à direita o Eixo Y e ao centro o Eixo Z. \footnotesize
 		Fonte: autoria própria. 
 		\label{acelx_0}	
 	\end{figure}		
+
 	\section{Discussão}		
 	\textit{DISCUSSÃO: tempo para desenvolver interface gráfica. responder o porque dos erros, e o porque das escolhas. Ruído devido ao movimento do próprio corpo humano. 	
 	}
