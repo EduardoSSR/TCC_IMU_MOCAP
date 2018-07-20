@@ -72,7 +72,8 @@ def main():
         print("2 ----> +- 1000 deg/s e +- 8g\n")
         print("3 ----> +- 2000 deg/s e +- 16g\n")
         
-        command = (input("Escolha o intervalo de leitura (e.g. 0): "))
+        command = (input("Escolha o intervalo de 
+	          leitura (e.g. 0): "))
         
         sleep(1.8)
         
@@ -103,7 +104,8 @@ def main():
             print("Comando invalido, tente outro.\n")
             t = 0
     
-    input("Pressione 'Enter' para iniciar a leitura e \"Ctrl+C\" para pausar: \n")
+    input("Pressione 'Enter' para iniciar a leitura e
+          \"Ctrl+C\" para pausar: \n")
     
     
     
@@ -121,16 +123,24 @@ def main():
                 Gx = np.float(entry[4])
                 Gy = np.float(entry[5])
                 Gz = np.float(entry[6])
-                
-                ACX = AcX/constant_Calib_Acel  # entre--20 m/s^2 e + 20 m/s^2 
-                ACY = AcY/constant_Calib_Acel  # entre--20 m/s^2 e + 20 m/s^2 
-                ACZ = AcZ/constant_Calib_Acel  # entre--20 m/s^2 e + 20 m/s^2 
+
+                #entre--20 m/s^2 e + 20 m/s^2 
+                ACX = AcX/constant_Calib_Acel 
+ 
+		#entre--20 m/s^2 e + 20 m/s^2 
+                ACY = AcY/constant_Calib_Acel  
+
+		#entre--20 m/s^2 e + 20 m/s^2 
+                ACZ = AcZ/constant_Calib_Acel   
                 
                 Temp = temp/340.00 + 36.53
                 
-                GX = Gx/constant_Calib_Gyro # entre +250deg/s e -250deg/s
-                GY = Gy/constant_Calib_Gyro # entre +250deg/s e -250deg/s
-                GZ = Gz/constant_Calib_Gyro # entre +250deg/s e -250deg/s
+		# entre +250deg/s e -250deg/s
+                GX = Gx/constant_Calib_Gyro 
+                # entre +250deg/s e -250deg/s
+		GY = Gy/constant_Calib_Gyro 
+                # entre +250deg/s e -250deg/s
+		GZ = Gz/constant_Calib_Gyro 
                 
                 read1.append(AcX) 
                 read2.append(AcY)
@@ -153,7 +163,9 @@ def main():
         
         except (KeyboardInterrupt):
             now = datetime.now()
-            print ("Voce pressionou Ctrl+C para interromper este programa! Seus dados foram salvos em 'Dados_%s.csv'"%(str(now)[:-7]))
+            print ("Voce pressionou Ctrl+C para interromper
+		    este programa! Seus dados foram salvos
+		    em 'Dados_%s.csv'"%(str(now)[:-7]))
 
             ser.close()
             
@@ -171,11 +183,14 @@ def main():
             plt.ylabel('Velocidade Angular (deg/s)');
             plt.show()
             
-            x = np.vstack((read1,read2,read3,read4,read5,read6,read7))
+            x = np.vstack((read1,read2,read3,read4,read5,read6,
+			   read7))
             y = np.vstack((acelX,acelY,acelZ,gyroX,gyroY,gyroZ))
         
-            np.savetxt('Dados_Brutos_%s.csv'%(str(now)[:-7]), np.transpose(x), delimiter=';')
-            np.savetxt('Dados_Fisicos_%s.csv'%(str(now)[:-7]), np.transpose(y), delimiter=';') 
+            np.savetxt('Dados_Brutos_%s.csv'%(str(now)[:-7]), 
+			np.transpose(x), delimiter=';')
+            np.savetxt('Dados_Fisicos_%s.csv'%(str(now)[:-7]),
+			np.transpose(y), delimiter=';') 
             break
 if __name__ == "__main__":
     main()
