@@ -404,8 +404,6 @@ Os resquisitos do projeto, que compuseram o \textit{backlog} e definiram os obje
 			\end{tabular}
 		\end{table}
 		
-		
- 
 		\begin{figure}[h]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=1]{figuras/diagrama_python.PNG}
@@ -428,7 +426,15 @@ Os resquisitos do projeto, que compuseram o \textit{backlog} e definiram os obje
 	
 	Após realizar as leitura, os dados foram plotados em um gráfico simples, onde o eixo horizontal representa o tempo e o vertical a aceleração medida. Foram colocados os gráficos dos 3 eixos na mesma imagem. 
 	
-	Para verificar se os giroscópios estavam funcionando, sem ainda se atentar a precisão deles e confiabilidade das medidas, foi realizado um movimento de rotação de 90$ \degree $ em relação a cada um dos eixos e ao fim da leitura do sensor o resultado foi plotado em um gráfico para facilitar a análise.
+	Para verificar se os giroscópios estavam funcionando, sem ainda se atentar a precisão deles e confiabilidade das medidas, foi realizado um movimento de rotação de 90$ \degree $ em relação a cada um dos eixos, como na Figura \ref{validacao_giro}  e ao fim da leitura do sensor o resultado foi plotado em um gráfico para facilitar a análise.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio=true,scale=0.55]{figuras/validacao_giro.png}
+		\caption{Demonstração direção de giro do sensor}
+		Fonte: autoria própria. 
+		\label{validacao_giro}	
+	\end{figure}
 	
 	Para verificar o funcionamento do MPU6050  e se as leituras são confiáveis, ou não, serão necessários muitos outros testes além dos realizados até o momento, como a comparação dos valores obtidos medindo movimentos corporais ao mesmo tempo que uma gravação de vídeo é realizada, e verificar se os valores obtidos com o IMU são condizentes com as imagens gravadas. E também um possível estudo de caso, ainda a ser formulado, com o auxílio dos pesquisadores do LIS. Realizando as medições em voluntários para estudo de movimentos corporais. 
 	
@@ -436,22 +442,111 @@ Os resquisitos do projeto, que compuseram o \textit{backlog} e definiram os obje
 \chapter{Resultados e Discussão}
 	\section{Resultados Parciais}
 	
-	Os resultados obtidos até o momento são parciais. E foram os seguintes resultados: protótipo funcional, \textit{case} para fixação\footnote{Ainda não é a definitiva}, \textit{software} para o microcontrolador, \textit{software} para ler, tratar e salvar os dados, tabelas e gráficos parciais do funcionamento do IMU.
+	Os resultados obtidos até o momento são parciais, pois o trabalho ainda terá uma segunda etapa, e são os seguintes: protótipo funcional, \textit{case} para fixação\footnote{Ainda não é a definitiva}, \textit{software} para o microcontrolador, \textit{software} para ler, tratar e salvar os dados, tabelas e gráficos parciais do funcionamento do IMU.
+	
+	As Figuras \ref{prototipo1} e \ref{prototipo1_2} mostram a primeira montagem feita do IMU, para programar o microcontrolador e verificar a comunicação entre o sensor e o Arduino,e a Figuras \ref{prototipo2} e \ref{prototipo3} mostram a segunda montagem realizada do IMU, onde ele foi soldado com em um cabo \textit{flat} e preso em uma tira de velcro.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio=true,scale=0.15]{figuras/prototipo1.jpg}
+		\caption{Protótipo na \textit{Protoboard}}
+		Fonte: autoria própria. 
+		\label{prototipo1}	
+	\end{figure}
 	 
+	 	\begin{figure}[h]
+	 		\centering
+	 		\includegraphics[keepaspectratio=true,scale=0.15]{figuras/prototipo2.jpg}
+	 		\caption{MPU6050 na \textit{Protoboard}}
+	 		Fonte: autoria própria. 
+	 		\label{prototipo1_2}	
+	 	\end{figure}
+	 	
+	 	\begin{figure}[h]
+	 		\centering
+	 		\includegraphics[keepaspectratio=true,scale=0.15]{figuras/prototipo_2_1.jpg}
+	 		\caption{Segundo Protótipo com o Velcro}
+	 		Fonte: autoria própria. 
+	 		\label{prototipo2}	
+	 	\end{figure}
+	 	\begin{figure}[h]
+	 		\centering
+	 		\includegraphics[keepaspectratio=true,scale=0.1]{figuras/prototipo_2_2.jpg}
+	 		\includegraphics[keepaspectratio=true,scale=0.1]{figuras/prototipo_2_3.jpg}
+	 		\caption{Protótipo Fixado ao Punho e à um Cubo}
+	 		Fonte: autoria própria. 
+	 		\label{prototipo3}	
+	 	\end{figure}
+	 
+	O programa rodando é mostrado nas Figuras \ref{tela_inicial},\ref{lista_ranges} e \ref{rodando} , que por enquanto apenas no \textit{prompt} de comando. Mas futuramente precisará de uma \textit{interface} mais amigável. A Figura \ref{tela_inicial} mostra a mensagem que aparece assim que a pessoa coloca o programa para funcionar, no caso, aparece também a lista de dispositivos conectados e pede para a pessoa escolher um deles. Se nenhum estivesse conectado, apareceria a mensagem "Conecte o Arduino".
+	
+	A Figura \ref{lista_ranges}, mostra o que aparece logo depois de escolher o Arduino. A confirmação de conexão com Arduino, uma mensagem, que vem do próprio Arduino, pedindo para selecionar uma das opções mostradas logo abaixo em um lista de possíveis escalas de leitura para o IMU e aguarda a a escolha do usuário.
+	
+	E na Figura \ref{rodando}, aparece a mensagem para iniciar a leitura do sensor e alguns dos dados lidos também são mostrados para o usuário, precisando apenas precionar Ctrl+C para pausar a leitura e salvar os dados em dois arquivos. Apenas para os teste foram acrescentados também, ao final, do programa a geração de dois gráficos, um com os dados obtidos dos acelerômetros e o outro para o giroscópio. 
+	 	
+	 	\begin{figure}[h]
+	 		\centering
+	 		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/tela_inicial.png}
+	 		\caption{Tela Inicial}
+	 		Fonte: autoria própria. 
+	 		\label{tela_inicial}	
+	 	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/lista_ranges.png}
+		\caption{Lista com as escalas}
+		Fonte: autoria própria. 
+		\label{lista_ranges}	
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/programa_rodando.png}
+		\caption{Programa mostrando os resultados}
+		Fonte: autoria própria. 
+		\label{rodando}	
+	\end{figure}
+	
+	
+	
+	 	
 	Os gráficos apresentados na Figura \ref{acelx_0}, mostram o resultado parcial do teste para medir a aceleração da gravidade com cada um dos 3 acelerômetros. É possível a partir deles verificar que os acelerômetros estão obtendo valores realistas para as medidas feitas, pois todos os gráficos apresentaram um valor muito próximo ao da aceleração da gravidade. Os gráficos ainda não estão com aspecto ideal, dando a sensação de presença de ruido, mas isso pode ser corrigido com um \textit{buffer} para carregar um quantidade os valores e mostrar apenas a média deles, porque o sensor é muito sensível a pequenas variações de aceleração.   
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/graficos_acel.png}
+		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/graficos_acel.png}
 		\caption{Gráficos com os 3 Eixos alinhados com a Normal.}
 		Na imagem à esquerda o Eixo X está alinhado, à direita o Eixo Y e ao centro o Eixo Z. \footnotesize
 		Fonte: autoria própria. 
 		\label{acelx_0}	
 	\end{figure}		
-
+	
+	Os gráficos da Figura \ref{teste_giro} representam respectivamente à esquerda, à direita e ao centro a rotação em relação aos Eixos X,Y e Z. O gráfico apresenta muito picos e variações que parecem ruídosos, mas na realidade é porque o sensor é muito preciso. E na hora de realizar o teste precisava de uma movimentação mais suave e constante, para melhor vizualização no gráfico, mas como teste foi realizado movimentando o sensor com a mão, ele captou a vibração natural da mão e o impacto com a superfície no momento que ele é solto, o que explica a movimentação em todos os sensores e não apenas em um.
+	
+	Porém, mesmo com o gráfico não apresnetando o resultado ideal, é possível verificar a variação nas velocidades de rotação em cada giroscópio separadamente, o que demonstra que os giroscópios funcionam. 
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/teste_giro.png}
+		\caption{Gráficos para Teste do Giroscópio.}
+		\footnotesize Fonte: autoria própria. 
+		\label{teste_giro}	
+		
+	\end{figure}
+	
 	\section{Discussão}		
-	\textit{DISCUSSÃO: tempo para desenvolver interface gráfica. responder o porque dos erros, e o porque das escolhas. Ruído devido ao movimento do próprio corpo humano. 	
-	}
+
+	O primeiro protótipo, na \textit{protoboboard}, foi útil por facilitar os testes de conexão, pois com a \textit{protoboard} não era necessário soldar os pinos, mas por ser um conexão instável está propensa a ruídos. E por isso foi feito o segundo protótipo. O cabo \textit{flat} foi escolhido , porque ele permitiu soldar o sensor e ainda mantê-lo com um tamanho confortável para fixação.
+	
+	A interface do programa ainda precisa ser melhorada, mas atende a aplicação, porque foi feita para utilização de pesquisadores do laboratório que receberam o treinamento e saberão lidar com linhas de comando, ou receberão o treinamento necessário para utilização. Com a melhoria da interface, será mais intuitivo utilizar o programa e ele se tornará ainda mais acessível, podendo ser utilizado por outros profissionais que tivem interesse no movimento corporal. Essa melhora não foi feita ainda devido ao tempo para realização do projeto que foi curto para as demandas do mesmo.
+	
+	 A partir dos resultados preliminares, mostrados no gráficos, é possível verificar que o IMU pode ser utilizado para o propósito estabelecido inicialmente, mas como este é apenas um protótipo muitos testes ainda serão necessários. Os gráficos ficariam melhores se os testes não tivessem sido realizados com os métodos que foram utilizados. Pois, o sensor acabou medindo a movimentação da mão que o manipulou e também os impactos nele.
+	
 \chapter{Conclusão}
 	
-	\textit{Feito protótipo, software para pesquisador, próximas etapas: case miniaturizado, comunicação sem fio.}
+	A medição dos movimentos corporais é muito importante para estudos sobre prevenção de lesão em atletas de alto desempenho. Para realizar essas medições são necessários equipamentos específicos. E o IMU surge como uma solução viável para facilitar o acesso dos pesquisadores a sensores de utilização menos complexas e de custo mais baixo. 
+	
+	Foi parcialmente concluído, neste trabalho, o protótipo de um sensor IMU capaz de medir aceleração linear em três eixos, e velocidade angular em três eixos. A partir dos resultados parciais obtidos, é possível afirmar que com essas seis medições os pesquisadores a utilizem com o \textit{software} que foi desenvolvido para a leitura do sensor.  E a partir dos dados coletados possam fazer análise de movimento, posição ou postura.
+	
+	A próxima etapa do trabalho é desenvolver um protocolo de comunicação sem fio para o IMU, pois traria mais conforto ao paciente, melhoraria a precisão dos dados e facilitaria o manuseio. Outra etapa é tentar miniaturizar o IMU, para facilitar a conexão dele em diversas partes do corpo e aumentar o conforto para o usuário. E, por fim, projetar uma \textit{case}, que deixe o IMU mais protegido de impactos, mais firme e seja miniaturizada. 
