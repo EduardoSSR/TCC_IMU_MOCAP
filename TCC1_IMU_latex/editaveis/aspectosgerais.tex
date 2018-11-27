@@ -14,7 +14,31 @@ Estes métodos utilizados analisam algumas características importantes, tais co
 Dessa forma, as avaliações biomecânicas devem ir além do olhar clínico ao analisarem os parâmetros associados a lesões de atletas e estruturarem seus argumentos em sistemas que possam ser capazes de traduzir estes parâmetros \cite{miziara2014}. Os métodos utilizados pela biomecânica para abordar as diversas formas de movimento são: eletromiografia, antropometria, dinamometria, cinemetria \cite{amadio2007}.
 
 A eletromiografia é a medição da atividade elétrica de músculos que podem ser relacionados durante a prática esportiva. A antropometria estabelece as propriedades físicas do corpo humano estudado como as medidas geométricas. A dinamometria mede parâmetros como força e distribuição de pressão com equipamentos específicos para cada atividade física. E, por fim, a cinemetria utiliza parâmetros como posição e orientação de partes do corpo humano, que é o tipo de medição tratado neste trabalho \cite{amadio2007}\cite{medeiros2013}.
-	
+
+\section{O processo de amostragem}
+ 
+A cinemetria pode ser realizada através da captura por imagens ou da medição de determinados pontos com sensores inerciais. E para os dois métodos é preciso saber qual a frequência de amostragem, no caso das imagens o número de frames por segundo, necessários para captar o movimento com precisão suficiente para afirmar que ele representa o movimento real \cite{amadio2007}.
+
+Para definição dessa frequência existe o teorema de amostragem Nyquist-Shannon, que é a base para determinar a frequêcia mínima de amostragem de um sinal. Através do processo de amostragem, um sinal contínuo no tempo, é modificado para um sinal discreto no tempo. O teorema da amostragem assegura que as amostras discretas uniformemente espaçadas são uma representação completa do sinal, se sua largura de banda é menor do que a metade da taxa de amostragem \cite{madeiro2011}.  
+
+Para formalizar o conceito, seja $ x(t) $ um sinal contínuo no tempo e $ X(f) $ sua tranformada de fourier (ou seja, representação do sinal em frequência):
+
+\begin{equation}
+ X(f) = \int^{\infty}_{-\infty} x(t)e^{-i2\pi ft}dt 
+\end{equation}
+
+O sinal $x(t)$ é limitado em banda, B, se:
+\begin{equation}
+X(f) = 0 \; \;\forall \; \; |f|>B
+\end{equation}
+
+A condição suficiente para uma exata reconstrução a partir das amostras em uma taxa de amostragem uniforme $ f_{s} $ (em amostras por unidade de tempo) é:
+
+\begin{equation}
+f_{s}>2B 
+\end{equation}
+
+$2B$ é a chamada de Taxa de Nyquist e é uma propriedade do sinal limitado em banda, e $f_{s}/2$ 
 	\section{MEMS}
 
 		MEMS\footnote{Micro Electro Mechanical Systems - Sistema Micro-eletromecânicos.}  é uma tecnologia de processamento usada para criar dispositivos integrados ou sistemas que combinam componentes mecânicos e elétricos. Eles são fabricados usando técnicas de processamento em lote de circuitos integrados e podem variar em tamanho entre alguns micrômetros para milímetros. Esses dispositivos (ou sistemas) têm a capacidade de detectar, controlar e atuar na escala micro e gerar efeitos em escala macro \cite{prime2002}. 
