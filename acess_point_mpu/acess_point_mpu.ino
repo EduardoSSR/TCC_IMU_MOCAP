@@ -20,11 +20,11 @@ void setup() {
 
   Wire.begin();
 
-  //#if ARDUINO >= 157
-  //Wire.setClock(400000UL); // Freq = 400kHz.
-  //#else
-  //TWBR = ((F_CPU/400000UL) - 16) / 2; // Freq = 400kHz 
-  //#endif
+  #if ARDUINO >= 157
+  Wire.setClock(400000UL); // Freq = 400kHz.
+  #else
+  TWBR = ((F_CPU/400000UL) - 16) / 2; // Freq = 400kHz 
+  #endif
 
   i2c_data[0] = 7;      /* 0x19 - Taxa de amostragem  8kHz/(7 + 1) = 1000Hz */
   i2c_data[1] = 0x00;   /* 0x1A - Desabilitar FSYNC, Configurar o Filtro de ACC 260Hz, Configurar Filtro de Gyro 256Hz, Amostragem de 8Khz */
@@ -45,6 +45,7 @@ void setup() {
     while(1){
       //Serial.print("Erro. Conecte a MPU6050 no barramento i2c\n");
     }
+   
   }
   IPAddress staticIP(192, 168, 4, 2); // IP set to Static
   IPAddress gateway(192, 168, 4, 1);// gateway set to Static
@@ -85,7 +86,7 @@ void loop() {
 
   //Wait until the client sends some data
   while (!client.available()) {
-    delay(1);
+  //  delay(1);
   }
 
   String req = client.readStringUntil('\r');
