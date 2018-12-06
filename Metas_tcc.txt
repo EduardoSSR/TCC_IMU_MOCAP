@@ -1,0 +1,13 @@
+meta1	   integrar hardware, 
+
+meta2	   protocolo web, wireless, tcpip, 
+
+meta3	   coleta arquivos, 
+
+meta4	   api de coleta tempo real, 
+
+meta5	   plotar os gráficos básicos(velocidades, aceleração, posicão, 3d), 
+
+meta6	   mais um imu, 
+	   
+meta7	   3 imus e calcular angulos. 
