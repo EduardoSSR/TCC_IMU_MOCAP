@@ -241,18 +241,18 @@ Logo a Taxa de Nyquist para amostragem de sinais de movimento humano é de 320 H
 	
 	
 
-\subsection{Arduino}
+\subsection{Arduíno}
 
-O Arduino é uma plataforma de desenvolvimento de código aberto que contém elementos de \textit{hardware} e \textit{software} especificamente adaptados à simplicidade de uso, permitindo uma rápida prototipagem de projetos. Placas Arduino têm grande potencial de desenvolvimento e uma ampla gama de recursos para uso em conjunto com sensores, transceptores de dados e atuadores, os quais são de grande interesse para este projeto \cite{smith2016}.
+O Arduíno é uma plataforma de desenvolvimento de código aberto que contém elementos de \textit{hardware} e \textit{software} especificamente adaptados à simplicidade de uso, permitindo uma rápida prototipagem de projetos. Placas Arduíno têm grande potencial de desenvolvimento e uma ampla gama de recursos para uso em conjunto com sensores, transceptores de dados e atuadores, os quais são de grande interesse para este projeto \cite{smith2016}.
 
-Uma das maiores vantagens do Arduino sobre outras plataformas de prototipagem com microcontroladores é a facilidade para utilizá-la, que permite que pessoas que não necessariamente são da área de tecnologia, possam aprender rapidamente o básico e criar seus próprios projetos. E existe um grande compartilhamento de projetos de forma livre utilizando essa plataforma. Isso é relevante para esse projeto em específico, pois ele está sendo desenvolvido para utilização de pesquisadores de diversas áreas do conhecimento, os quais poderão aprender a adaptar o projeto para suas necessidades e demandas futuras \cite{arduino2011}.
+Uma das maiores vantagens do Arduíno sobre outras plataformas de prototipagem com microcontroladores é a facilidade para utilizá-la, que permite que pessoas que não necessariamente são da área de tecnologia, possam aprender rapidamente o básico e criar seus próprios projetos. E existe um grande compartilhamento de projetos de forma livre utilizando essa plataforma. Isso é relevante para esse projeto em específico, pois ele está sendo desenvolvido para utilização de pesquisadores de diversas áreas do conhecimento, os quais poderão aprender a adaptar o projeto para suas necessidades e demandas futuras \cite{arduino2011}.
 
-Existem diversos modelos de placas Arduino no mercado, sendo as mais utilizadas Lilypad, Uno, Mini Pro, Mega e Nano. Cada uma dessas placas possuem suas particularidades em relação ao número de recursos, formato físico, memória e capacidade de processamento. Na Tabela \ref{tipos_arduino} estão listados alguns modelos e suas características \cite{smith2016}.
+Existem diversos modelos de placas Arduíno no mercado, sendo as mais utilizadas Lilypad, Uno, Mini Pro, Mega e Nano. Cada uma dessas placas possuem suas particularidades em relação ao número de recursos, formato físico, memória e capacidade de processamento. Na Tabela \ref{tipos_arduino} estão listados alguns modelos e suas características \cite{smith2016}.
 
 
 \begin{table}[h] \footnotesize
 	\centering
-	\caption{Tabela de comparação dos modelos de Arduino}
+	\caption{Tabela de comparação dos modelos de Arduíno}
 	\label{tipos_arduino}
 	
 	\begin{tabular}{lccccc}
@@ -274,7 +274,7 @@ Existem diversos modelos de placas Arduino no mercado, sendo as mais utilizadas 
 	\end{tabular}
 \end{table}
 
-O Arduino Nano (Figura \ref{arduino}) tem funcionalidades muito semelhantes às do Arduino Duemilanove, mas com um formato diferente. O Nano possui o microcontrolador ATmega328P embutido nele, o mesmo que o Arduino UNO. A principal diferença entre eles é que a placa UNO é apresentada em formato PDIP (\textit{Plastic Dual-In-line Package}) com 30 pinos e Nano está disponível em PQFP(\textit{Plastic Quad Flat Pack}) com 32 pinos. Os 2 pinos extras do Arduino Nano servem para as funcionalidades do ADC, enquanto o UNO possui 6 portas ADC, o Nano possui 8. A placa Nano não vem com um conector para fonte DC (\textit{Direct Current} - Corrente Contínua) como outras placas Arduino, mas possui uma porta mini-USB. Esta porta é usada para programação, monitoramento serial e alimentação de energia, se necessário. A característica fascinante do Nano é que ele escolherá a fonte de energia mais forte com sua diferença de potencial, e o \textit{jumper} de seleção de fonte de energia é inválido \cite{john2018}.  
+O Arduíno Nano (Figura \ref{arduino}) tem funcionalidades muito semelhantes às do Arduíno Duemilanove, mas com um formato diferente. O Nano possui o microcontrolador ATmega328P embutido nele, o mesmo que o Arduíno UNO. A principal diferença entre eles é que a placa UNO é apresentada em formato PDIP (\textit{Plastic Dual-In-line Package}) com 30 pinos e Nano está disponível em PQFP(\textit{Plastic Quad Flat Pack}) com 32 pinos. Os 2 pinos extras do Arduno Nano servem para as funcionalidades do ADC, enquanto o UNO possui 6 portas ADC, o Nano possui 8. A placa Nano não vem com um conector para fonte DC (\textit{Direct Current} - Corrente Contínua) como outras placas Arduíno, mas possui uma porta mini-USB. Esta porta é usada para programação, monitoramento serial e alimentação de energia, se necessário. A característica fascinante do Nano é que ele escolherá a fonte de energia mais forte com sua diferença de potencial, e o \textit{jumper} de seleção de fonte de energia é inválido \cite{john2018}.  
 
 \begin{figure}[h]
 	\centering
@@ -285,12 +285,26 @@ O Arduino Nano (Figura \ref{arduino}) tem funcionalidades muito semelhantes às 
 	\label{arduino}	
 \end{figure}
 
-Para se comunicar com qualquer microcontrolador ou computador, é necessário usar uma linguagem de programação. No caso do Arduino, é necessário usar a linguagem C++\footnote{Com alguma modificações.}, que é uma linguagem tradicional e já bastante conhecida. Porém, essa linguagem ainda não é a que a máquina compreende, é uma linguagem de alto nível, e para a máquina compreendê-la é necessário o uso de um compilador, que converte a linguagem de alto nível para a linguagem de máquina. Em geral, para compilar um programa, é necessário a utilização de um IDE (\textit{Integrated Development Environment} - Ambiente de Desenvolvimento Integrado), um aplicativo de computador que possui um compilador integrado. A plataforma do Arduino utiliza o Arduino IDE \cite{chavier2016}. 
+Para se comunicar com qualquer microcontrolador ou computador, é necessário usar uma linguagem de programação. No caso do Arduíno, é necessário usar a linguagem C++\footnote{Com alguma modificações.}, que é uma linguagem tradicional e já bastante conhecida. Porém, essa linguagem ainda não é a que a máquina compreende, é uma linguagem de alto nível, e para a máquina compreendê-la é necessário o uso de um compilador, que converte a linguagem de alto nível para a linguagem de máquina. Em geral, para compilar um programa, é necessário a utilização de um IDE (\textit{Integrated Development Environment} - Ambiente de Desenvolvimento Integrado), um aplicativo de computador que possui um compilador integrado. A plataforma do Arduíno utiliza o Arduíno IDE \cite{chavier2016}. 
 
 \subsection{Esp8266}
 
-O ESP8266, assim como o Arduíno, é  um microcontrolador  fabricado pela empresa \textit{Espressif Systems}. Possui um sistema de comunicação WiFi próprio, podendo ser utilizado tanto para acessar a uma rede existente, como para criar o próprio ponto de acesso.  Essa funcionalidade é seu grande diferencial em relação ao Arduíno, porém existem outras diferenças \cite{oliveira2017}. 
+O ESP8266, assim como o Arduíno, é  um microcontrolador  fabricado pela empresa \textit{Espressif Systems}. Possui um sistema de comunicação \textit{WiFi }próprio, podendo ser utilizado tanto para acessar a uma rede existente, como para criar o próprio ponto de acesso.  Essa funcionalidade é seu grande diferencial em relação ao Arduíno, porém existem outras diferenças \cite{oliveira2017}. 
 
+A tensão das portas digitais é de 3.3 V, possui apenas uma porta para leitura analógica, 11 portas digitais, memória flash de 4Mb e um processador com velocidade de \textit{clock} de 80MHz, todas essas características são diferentes nas placas Arduíno \cite{wemos2017}.
+
+Existe uma grande variedade de placas disponíveis no Brasil.  Mas em todas elas é utilizado apenas um processador ESP8266. O que distingue os modelos um do outro é o número de pinos GPIO (\textit{General Purpose Input/Output - Entrada e Saída para Uso Geral}) expostos, a quantidade de memória flash fornecida, o estilo dos pinos do conector e várias outras considerações relacionadas à fabricação.  Em relação a  programação, elas são todas iguais e podem ter seu código embarco escrito com a IDE do Arduíno, sendo apenas necessário carregar sua biblioteca de placas, através do próprio programa, e a linguagem de programação utilizada também é o C++  \cite{kolban2016}.
+
+Um dos modelos é a placa Wemos D1 (Figura \ref{wemosd1} ), que tem o mesmo formato do Arduíno UNO, o que deixa a utilização mais confortável para usuários do Arduíno. Esse modelo possui todos os seus pinos descritos na própria placa, também possui pinos para comunicação I2C, conector micro USB e um conector de carga que aceita tensão entre 9 e 24 V \cite{kolban2016}\cite{wemos2017}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.7
+	]{figuras/wemosd1.png}
+	\caption{ WeMos D1 - R2 }
+	Fonte: \cite{wemos2017}
+	\label{wemosd1}	
+\end{figure}
 
 \section{Python}
 
@@ -321,10 +335,10 @@ Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objet
 		\begin{itemize}
 			
 			\item Sensor MPU6050;
-			\item Arduino Nano V.3;
+			\item Arduíno Nano V.3;
 			\item Fios (\textit{jumpers});
 			\item Cabo USB;
-			\item Computador com Arduino IDE e \textit{Python} instalados;
+			\item Computador com Arduíno IDE e \textit{Python} instalados;
 			\item \textit{Jupyter Notebook};
 			\item Tiras de velcro;
 			\item Cabo \textit{flat} (8 fios);
@@ -334,22 +348,22 @@ Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objet
 	 
 	\subsection{Métodos}
 		
-		Para realizar a comunicação do sensor MPU6050 com o Arduino foi feita a conexão conforme o esquemático mostrado na Figura \ref{conexoes} e na Tabela \ref{conexoes_arduino}. Logo abaixo, onde os pinos Vcc e Gnd do MPU6050, responsáveis por ligar do sensor, foram conectados aos pinos 5V e Gnd do Arduino. O pino SDA (\textit{Serial Data} - Dados Seriais)\footnote{Pino de transferência de dados.} foi conectado ao pino SDA do Arduino, que também é o pino de entrada analógica A4 e o pino SCL (\textit{Serial Clock} - "Relógio"\ Serial)\footnote{Pino de sincronização do \textit{clock}.} ao pino SCL do Arduino, que também é o pino de entrada analógica A5.  
+		Para realizar a comunicação do sensor MPU6050 com o Arduíno foi feita a conexão conforme o esquemático mostrado na Figura \ref{conexoes} e na Tabela \ref{conexoes_arduino}. Logo abaixo, onde os pinos Vcc e Gnd do MPU6050, responsáveis por ligar do sensor, foram conectados aos pinos 5V e Gnd do Arduíno. O pino SDA (\textit{Serial Data} - Dados Seriais)\footnote{Pino de transferência de dados.} foi conectado ao pino SDA do Arduíno, que também é o pino de entrada analógica A4 e o pino SCL (\textit{Serial Clock} - "Relógio"\ Serial)\footnote{Pino de sincronização do \textit{clock}.} ao pino SCL do Arduíno, que também é o pino de entrada analógica A5.  
 		
-		O  modelo escolhido para este projeto foi o Arduino Nano, pois mesmo sendo apenas um protótipo, haverá a necessidade de que o tamanho do IMU seja reduzido para facilitar a fixação em diversas partes do corpo e o custo financeiro\footnote{Preços pesquisados em lojas de Brasília.} para desenvolvimento do protótipo foi levado em consideração.
+		O  modelo escolhido para este projeto foi o Arduíno Nano, pois mesmo sendo apenas um protótipo, haverá a necessidade de que o tamanho do IMU seja reduzido para facilitar a fixação em diversas partes do corpo e o custo financeiro\footnote{Preços pesquisados em lojas de Brasília.} para desenvolvimento do protótipo foi levado em consideração.
 		
 		Para os primeiros testes foi utilizada um \textit{protoboard} para facilitar as conexões, pois ela permite que os componentes sejam conectado sem a necessidade de solda entre eles. Mas em um segundo momento para os teste de movimento serem realizados com maior acurácia, houve a necessidade de retirar os componentes da \textit{protoboard} e soldá-los em uma placa furada de cobre, e isso faria o ruído devido a conexões instáveis fosse menor.
 		
-		O sensor foi fixado em uma faixa de velcro, para permitir a fixação do IMU em diversas partes do corpo, e para conectá-lo ao Arduino foi soldado ao sensor um cabo \textit{flat} com 8 fios.
+		O sensor foi fixado em uma faixa de velcro, para permitir a fixação do IMU em diversas partes do corpo, e para conectá-lo ao Arduíno foi soldado ao sensor um cabo \textit{flat} com 8 fios.
 		
 		\begin{table}[h] \footnotesize
 			\centering
-			\caption{Conexões entre Arduino e MPU6050}
+			\caption{Conexões entre Arduíno e MPU6050}
 			\label{conexoes_arduino}
 			
 			\begin{tabular}{cc}
 				\toprule
-				\textbf{Arduino} & \textbf{MPU6050} \\
+				\textbf{Arduíno} & \textbf{MPU6050} \\
 				\midrule
 				5V & VCC \\
 				GND & GND \\
@@ -363,17 +377,17 @@ Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objet
 		\begin{figure}[h]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/conexoes_mpu_arduino.PNG}
-			\caption{ Esquemático de conexão do MPU6050 com Arduino Nano }
+			\caption{ Esquemático de conexão do MPU6050 com Arduíno Nano }
 			Fonte: autoria própria. \footnotesize
 			\label{conexoes}	
 		\end{figure}
 		
-		A comunicação entre o sensor MPU6050 e o Arduino foi realizada através do protocolo I2C, onde os dados eram enviados de forma serial através de apenas um fio e os dados organizados como mostrado na Figura \ref{comunicacao}, onde é evidenciado quais são os dados transmitidos do MPU6050 para o Arduino e a velocidade do \textit{clock}, e Figura \ref{i2c}, que mostra com mais detalhe a relação dos dados com o \textit{clock}.
+		A comunicação entre o sensor MPU6050 e o Arduíno foi realizada através do protocolo I2C, onde os dados eram enviados de forma serial através de apenas um fio e os dados organizados como mostrado na Figura \ref{comunicacao}, onde é evidenciado quais são os dados transmitidos do MPU6050 para o Arduíno e a velocidade do \textit{clock}, e Figura \ref{i2c}, que mostra com mais detalhe a relação dos dados com o \textit{clock}.
 		
 		\begin{figure}[h]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.4]{figuras/comunicacao.PNG}
-			\caption{ Transmissão de dados do MPU6050 para Arduino}
+			\caption{ Transmissão de dados do MPU6050 para Arduíno}
 			Fonte: autoria própria. 
 			\label{comunicacao}	
 		\end{figure}
@@ -386,14 +400,14 @@ Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objet
 			\label{i2c}	
 		\end{figure}
 	
-		O Arduino Nano foi conectado ao computador por meio de um cabo USB 2.0, que além de ser responsável pela comunicação, também era por meio dele que era realizada a alimentação de energia com 5V de tensão. O protocolo de comunicação utilizado com um cabo USB também foi o serial. Então, os dados transmitidos do Arduino para o computador são enviados em série. 
+		O Arduíno Nano foi conectado ao computador por meio de um cabo USB 2.0, que além de ser responsável pela comunicação, também era por meio dele que era realizada a alimentação de energia com 5V de tensão. O protocolo de comunicação utilizado com um cabo USB também foi o serial. Então, os dados transmitidos do Arduíno para o computador são enviados em série. 
 		
 		
 \section {Projeto de Software}
 		
-		Para esse trabalho foram necessários dois projetos de \textit{softwares}, um para ficar salvo no Arduino e outro que será o \textit{software}, em \textit{Python}, responsável por fazer o tratamento dos dados adquiridos do sensor e salvá-los para análises futuras.
+		Para esse trabalho foram necessários dois projetos de \textit{softwares}, um para ficar salvo no Arduíno e outro que será o \textit{software}, em \textit{Python}, responsável por fazer o tratamento dos dados adquiridos do sensor e salvá-los para análises futuras.
 		
-		\subsection{Software para o Arduino}
+		\subsection{Software para o Arduíno}
 			Os requisitos do software salvo no microcontrolador são:
 			\begin{itemize}
 				\item Inicializar o MPU6050;
@@ -413,16 +427,16 @@ Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objet
 			\label{fluxograma_arduino}	
 		\end{figure}
 		
-		Para realizar a transmissão dos dados do Arduino para o programa em \textit{Python}, o programa salvo no Arduino imprime no terminal serial os dados obtidos do sensor. O programa é fechado sempre que uma nova leitura é realizada.
+		Para realizar a transmissão dos dados do Arduíno para o programa em \textit{Python}, o programa salvo no Arduíno imprime no terminal serial os dados obtidos do sensor. O programa é fechado sempre que uma nova leitura é realizada.
 		 
 \subsection{Software para Salvar os Dados}
-		Esse segundo programa, foi feito para realizar a leitura dos dados transmitidos pelo Arduino, e salvá-los em um arquivo de texto, para futuras análises. Esse \textit{software} ainda dá a possibilidade do usuário salvar os dados sem nenhum tratamento ou os valores com medidas físicas aproximadas das medições realizadas. 
+		Esse segundo programa, foi feito para realizar a leitura dos dados transmitidos pelo Arduíno, e salvá-los em um arquivo de texto, para futuras análises. Esse \textit{software} ainda dá a possibilidade do usuário salvar os dados sem nenhum tratamento ou os valores com medidas físicas aproximadas das medições realizadas. 
 		
 		O \textit{software} foi escrito em \textit{Python} 3 e compilado com o \textit{Jupyter Notebook} e com a IDE \textit{Spyder}, os dois compiladores são do pacote Anaconda. 
 		
-		O programa inicia mostrando a lista de dispositivos USB conectados ao computador. Se não houver nenhum dispositivo conectado aparece a mensagem "Conecte o Arduino". Se houver, a mensagem que aparece pede para digitar o número correspondente ao dispositivo que o usuário pretende verificar os dados. 
+		O programa inicia mostrando a lista de dispositivos USB conectados ao computador. Se não houver nenhum dispositivo conectado aparece a mensagem "Conecte o Arduíno". Se houver, a mensagem que aparece pede para digitar o número correspondente ao dispositivo que o usuário pretende verificar os dados. 
 		
-		Após a escolha do Arduino, o usuário deve escolher entre as 4 possibilidades de escala dos dados obtidos. E em seguida pressionar " enter "\ para iniciar a leitura e "Ctrl+C"\footnote{No \textit{Jupyter Notebook} o "Ctrl+C"\ não funcionou, precisando assim pressionar o ícone de \textit{"stop"} disponível na tela.} para pausar e salvar os valores. O programa então imprime na tela os valores dos sensores que estão sendo lidos e ao fim do código, quando o usuário pressionar "Ctrl+C", os valores são salvos em dois arquivos nomeados com a data de quando foi finalizada a leitura, como mostrado na Figura \ref{fluxograma_python}.
+		Após a escolha do Arduíno, o usuário deve escolher entre as 4 possibilidades de escala dos dados obtidos. E em seguida pressionar " enter "\ para iniciar a leitura e "Ctrl+C"\footnote{No \textit{Jupyter Notebook} o "Ctrl+C"\ não funcionou, precisando assim pressionar o ícone de \textit{"stop"} disponível na tela.} para pausar e salvar os valores. O programa então imprime na tela os valores dos sensores que estão sendo lidos e ao fim do código, quando o usuário pressionar "Ctrl+C", os valores são salvos em dois arquivos nomeados com a data de quando foi finalizada a leitura, como mostrado na Figura \ref{fluxograma_python}.
 		
 		Para definir melhor os requisitos do \textit{software}, foi feita a seguinte história de usuário descrita na Tabela \ref{User_story}, e a partir dela foi possível desenvolver o \textit{software} inicial e com ele realizar os testes preliminares do protótipo.
 		
@@ -494,7 +508,7 @@ Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objet
 	
 	Os resultados obtidos são os seguintes: protótipo funcional, \textit{case} para fixação\footnote{Ainda não é a definitiva.}, \textit{software} para o microcontrolador, \textit{software} para ler, tratar e salvar os dados, tabelas e gráficos parciais do funcionamento do IMU.
 	
-	As Figuras \ref{prototipo1} e \ref{prototipo1_2} mostram a primeira montagem feita do IMU para programar o microcontrolador e verificar a comunicação entre o sensor e o Arduino. As Figuras \ref{prototipo2} e \ref{prototipo3} mostram a segunda montagem realizada do IMU, onde ele foi soldado com um cabo \textit{flat} e preso em uma tira de velcro.
+	As Figuras \ref{prototipo1} e \ref{prototipo1_2} mostram a primeira montagem feita do IMU para programar o microcontrolador e verificar a comunicação entre o sensor e o Arduíno. As Figuras \ref{prototipo2} e \ref{prototipo3} mostram a segunda montagem realizada do IMU, onde ele foi soldado com um cabo \textit{flat} e preso em uma tira de velcro.
 	
 	\begin{figure}[h]
 		\centering
@@ -528,9 +542,9 @@ Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objet
 	 		\label{prototipo3}	
 	 	\end{figure}
 	 
-	O programa em funcionemento é mostrado nas Figuras \ref{tela_inicial}, \ref{lista_ranges} e \ref{rodando} que, por enquanto, apenas no \textit{prompt} de comando. Mas futuramente precisará de uma \textit{interface} mais amigável. A Figura \ref{tela_inicial} mostra a mensagem que aparece assim que a pessoa coloca o programa para funcionar, no caso, aparece também a lista de dispositivos conectados e pede para a pessoa escolher um deles. Se nenhum estivesse conectado, apareceria a mensagem "Conecte o Arduino".
+	O programa em funcionemento é mostrado nas Figuras \ref{tela_inicial}, \ref{lista_ranges} e \ref{rodando} que, por enquanto, apenas no \textit{prompt} de comando. Mas futuramente precisará de uma \textit{interface} mais amigável. A Figura \ref{tela_inicial} mostra a mensagem que aparece assim que a pessoa coloca o programa para funcionar, no caso, aparece também a lista de dispositivos conectados e pede para a pessoa escolher um deles. Se nenhum estivesse conectado, apareceria a mensagem "Conecte o Arduíno".
 	
-	A Figura \ref{lista_ranges}, mostra o que aparece logo depois de escolher o Arduino. A confirmação de conexão com Arduino, uma mensagem, que vem do próprio Arduino, pedindo para selecionar uma das opções mostradas logo abaixo em um lista de possíveis escalas de leitura para o IMU e aguarda a escolha do usuário.
+	A Figura \ref{lista_ranges}, mostra o que aparece logo depois de escolher o Arduíno. A confirmação de conexão com Arduíno, uma mensagem, que vem do próprio Arduíno, pedindo para selecionar uma das opções mostradas logo abaixo em um lista de possíveis escalas de leitura para o IMU e aguarda a escolha do usuário.
 	
 	E na Figura \ref{rodando}, aparece a mensagem para iniciar a leitura do sensor e alguns dos dados lidos também são mostrados para o usuário, precisando apenas pressionar Ctrl+C para pausar a leitura e salvar os dados em dois arquivos. Apenas para os testes foram acrescentados também ao final do programa a geração de dois gráficos, um com os dados obtidos dos acelerômetros e o outro para o giroscópio. 
 	 	
