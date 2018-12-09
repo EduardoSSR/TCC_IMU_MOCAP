@@ -2,12 +2,147 @@
 
 \partapendices
 
-\chapter{Primeiro Apêndice}
+\chapter{Código Fonte do Arduíno com um Sensor}
 
-Texto do primeiro apêndice.
+// Programa para leitura do Módulo MPU 6050 \\
+// Autor: Eduardo-ssr\\
 
-\chapter{Segundo Apêndice}
+//Carrega as bibliotecas\\
+\#include<Wire.h>\\
+\#include <I2Cdev.h>\\
+\#include <MPU6050.h>\\
 
-Texto do segundo apêndice.
+//Endereco I2C do MPU6050\\
+const int MPU=0x68;  \\
+
+//Variaveis para armazenar valores dos sensores\\
+double AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;\\
+char command;\\
+int test = 0;\\
+int c = 0;\\
+
+void setup()\\
+\{\\
+Serial.begin(115200);\\
+Serial.print("Digite o comando.(0,1,2 ou 3)\&$\backslash$n");\\
+delay(1000);\\
+Wire.begin();\\
+do\{\\
+if (Serial.available())\{\\
+
+command = Serial.read();\\
+
+if(command == '0')\{\\  
+Serial.print("Comando 0 recebido.$\backslash$n");\\
+c = 0;\\
+test = 1;\\
+delay(2);\\	
+\}\\	
+else if(command == '1')\{\\
+
+Serial.print("Comando 1 recebido.$\backslash$n");\\    
+c = 1;\\
+test = 1;\\
+delay(2); \\
+\}\\
+else if (command == '2')\{\\
+Serial.print("Comando 2 recebido.$\backslash$n");\\    
+c = 2;\\
+test = 1;\\
+delay(2);\\
+\}\\
+else if (command == '3')\{\\
+Serial.print("Comando 3 recebido.$\backslash$n");\\   
+c = 3;\\
+test = 1;\\
+delay(2);\\
+\}\\
+else\{\\
+Serial.print("Comando invalido. Tente outro.$\backslash$n");\\ 
+delay(1000);\\
+test = 0;\\
+\}\\
+\}\\
+\}while(test == 0);\\
+Wire.beginTransmission(MPU);\\
+Wire.write(0x6B); \\
+
+//Inicializa o MPU-6050\\
+Wire.write(c); \\
+Wire.endTransmission(true);\\
+\}\\
+void loop()\\
+\{ \\
+
+Wire.beginTransmission(MPU);\\
+Wire.write(0x3B);  // starting with register\\ 0x3B (ACCEL\_XOUT\_H)\\
+Wire.endTransmission(false);\\
+
+//Solicita os dados do sensor\\
+Wire.requestFrom(MPU,14,true); \\ 
+
+//Armazena o valor dos sensores nas variaveis correspondentes\\
+AcX=Wire.read()<<8|Wire.read();  //0x3B (ACCEL\_XOUT\_H) \& 0x3C (ACCEL\_XOUT\_L)    \\ 
+AcY=Wire.read()<<8|Wire.read();  //0x3D (ACCEL\_YOUT\_H) \& 0x3E (ACCEL\_YOUT\_L)\\
+AcZ=Wire.read()<<8|Wire.read();  //0x3F (ACCEL\_ZOUT\_H) \& 0x40 (ACCEL\_ZOUT\_L)\\
+Tmp=Wire.read()<<8|Wire.read();  //0x41 (TEMP\_OUT\_H) \& 0x42 (TEMP\_OUT\_L)\\
+GyX=Wire.read()<<8|Wire.read();  //0x43 (GYRO\_XOUT\_H) \& 0x44 (GYRO\_XOUT\_L)\\
+GyY=Wire.read()<<8|Wire.read();  //0x45 (GYRO\_YOUT\_H) \& 0x46 (GYRO\_YOUT\_L)\\
+GyZ=Wire.read()<<8|Wire.read();  //0x47 (GYRO\_ZOUT\_H) \& 0x48 (GYRO\_ZOUT\_L)\\
+
+
+//Envia valor X do acelerometro para a serial\\
+Serial.print(AcX);\\
+Serial.print("$\backslash$t");\\
+
+//Envia valor Y do acelerometro para a serial\\ 
+Serial.print(AcY);\\  
+Serial.print("$\backslash$t");\\
+
+//Envia valor Z do acelerometro para a serial\\
+Serial.print(AcZ);\\
+Serial.print("$\backslash$t");\\
+
+//Envia valor da temperatura para a serial\\
+//Calcula a temperatura em graus Celsius\\
+Serial.print(Tmp);//(Tmp/340.00+36.53)\\
+Serial.print("$\backslash$t");\\
+
+//Envia valor X do giroscopio para a serial\\ 
+Serial.print(GyX);\\
+Serial.print("$\backslash$t");\\
+
+//Envia valor Y do giroscopio para a serial\\   
+Serial.print(GyY);\\
+Serial.print("$\backslash$t");\\
+
+//Envia valor Z do giroscopio para a serial\\ 
+Serial.println(GyZ);\\
+//Serial.print("$\backslash$t");\\
+//Serial.println(" ");\\
+// delay(100);\\
+
+\}\\
+\chapter {Código Arduino com 3 Sensores}
+\footnotesize
+\lstinputlisting[language = Python]{editaveis/read_mpu_multiplex.c} 
+
+\chapter {Código Wemos D1 como Ponto de Acesso}
+\footnotesize
+\lstinputlisting[language = Python]{editaveis/acess_point_mpu.c} 
+
+\chapter{Código do Programa em Python com um Sensor}
+\footnotesize
+\lstinputlisting[language = Python]{editaveis/read_arduino_v5.py} 
+\chapter{Código do Programa em Python com 3 Sensores}
+\footnotesize
+\lstinputlisting[language = Python]{editaveis/Read_multiplex.py} 
+\chapter{Funções de Comunicação}
+\footnotesize
+\lstinputlisting[language = Python]{editaveis/i2cMPU6050.c} 
+
+\chapter{Código do Programa em Python para Leitura HTML}
+\footnotesize
+\lstinputlisting[language = Python]{editaveis/Read_HTML.py}
 
 \end{apendicesenv}
