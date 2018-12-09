@@ -57,7 +57,7 @@ void mpu_begin(){
 void setup() {
 
   /* Inicializando a Serial para exibir mensagens de Debug */
-  Serial.begin(115200);
+  Serial.begin(2000000);
   
   //Configura o pino AD0 dos Sensores  
   pinMode(mpuA,OUTPUT);
@@ -129,7 +129,7 @@ void loop() {
 
   /* Calculo do Delta Time */
   
-  if((micros()-timer) >= 1000){
+  //if((micros()-timer) >= 1000){
   /* Transmissão dos dados para porta Serial*/
 
   Serial.print(n); Serial.print("\t");
@@ -140,8 +140,8 @@ void loop() {
   Serial.print(gyroX); Serial.print("\t");
   Serial.print(gyroY); Serial.print("\t");
   Serial.print(gyroZ); Serial.print("\n");
-  timer = micros();
+  //timer = micros();
   
-    }  
+   // }  
   }
 }    
