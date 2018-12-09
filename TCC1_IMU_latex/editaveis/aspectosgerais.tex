@@ -314,12 +314,27 @@ O principal objetivo de qualquer linguagem de programação é fazer uma ponte e
 
 \textit{Python} é uma boa linguagem para aplicações científicas porque é fácil traduzir raciocínio em algoritmos através dela, bem como é simples ler um código em \textit{Python} e conseguir entender o raciocínio por trás dele, por ser uma linguagem com poucos caracteres especiais, poucas palavras chaves utilizadas apenas para compilar e ter uma sintaxe muito próxima da linguagem falada \cite{reitz2018}. Além disso, é uma linguagem de propósito geral. Muitas vezes, é necessário lidar com tarefas laterais: buscar dados em um banco de dados remoto, ler uma página na \textit{internet}, exibir graficamente os resultados, criar uma planilha, etc. Linguagens de cunho especificamente científico têm um sério problema aí, mas, uma vez que \textit{Python} é utilizada em praticamente todos os tipos de tarefa, encontram-se módulos prontos para realizar essas tarefas que podem se tornar complicadas. Ou seja, é uma preocupação a menos para quem está desenvolvendo aplicações científicas \cite{downey2012}.
   
-\section {Video \textit{Tracker}}
-Video \textit{tracker} \cite{onorato2012}
+%\section {Video \textit{Tracker}}
+%Video \textit{tracker} \cite{onorato2012}
 
 \section{Protocolo HTTP}
 
-\textit{Hypertext Transfer Protocol} (HTTP) \cite{vieira2007}.
+\textit{Hypertext Transfer Protocol} (HTTP)  é o método utilizado para enviar e receber informações na \textit{web}.  A versão mais utilizada atualmente é a 1.1, definida pela especificação RFC 2616. RFCs (\textit{Request for Comments}) são documentos técnicos desenvolvidos e mantidos pelo IETF (\textit{Internet Enginnering Task Force}), instituição que especifica os padrões que serão implementados e utilizados em toda a internet \cite{vieira2007}.
+
+ O protocolo é baseado em requisições e respostas entre clientes e servidores. O cliente, navegador ou dispositivo que fará a requisição; também é conhecido como \textit{user agent}, olicita um determinado  \textit{resource} (recurso), enviando um pacote de informações contendo alguns cabeçalhos (\textit{headers}) a um URI (\textit{Uniform Resource Identifier - Identificador Uniforme de Recurso })ou, mais especificamente, URL (Uniform Resource Locator - Localizador Uniforme de Recursos). O servidor recebe estas informações e envia uma resposta, que pode ser um recurso ou um simplesmente um outro cabeçalho \cite{vieira2007}.
+ 
+ O protocolo HTTP é\textit{ stateless}, ou seja, ele não é capaz por si só de reter informações entre requisições diferentes. Para manter informações é necessário utilizar \textit{cookies}, sessões, campos de formulário ou variáveis na própria URL \cite{vieira2007}.
+ 
+Quando um requisição é realizada, é preciso especificar qual método deve ser utilizado. O HTTP possui 8, também chamados de verbos, 
+identificam a ação a ser executada por certo recurso.  Os 5 métodos mais utilizados são: \textit{get, post}, delete,\textit{put} e \textit{head} \cite{vieira2007}\cite{szigalski2018}. 
+
+\textit{Get} solicita a representação  de um recurso. É definido como um método seguro e não deve ser usado para disparar uma ação.  \textit{Post} é a informação enviada ao corpo da requisição e é utilizado para criar um novo recurso. \textit{Delete} remove um recurso. \textit{Put} atualiza um recurso na URI especificada. Caso o recurso não exista, ele pode criar um. A principal diferença entre \textit{post} e \textit{put} é que o primeiro pode lidar não somente com recursos, mas pode fazer processamento de informações, por exemplo. \textit{Head} retorna informações sobre um recurso. Na prática, funciona semelhante ao método \textit{get}, mas sem retornar o recurso no corpo da requisição. Também é considerado um método seguro \cite{vieira2007}.
+
+Toda requisição recebe um código de resposta conhecido como \textit{status}.  Assim é possível saber se uma operação foi realizada com sucesso (código 200), se ele foi movida e agora existe em outro lugar (código 301) ou se não existe mais ( código 404), e existem muitos outros códigos \cite{vieira2007}.
+
+O HTTP é um protocolo extensível que é simplesl de usar. A arquitetura cliente-servidor, combinada com a habilidade de simplesmente adicionar cabeçalhos, permite que o HTTP avance suas funcionalidades juntamente com a elasticidade da \textit{web} \cite{szigalski2018}.
+
+
 
 \chapter[Metodologia]{Metodologia}
 
@@ -327,23 +342,26 @@ Nesta seção será apresentado quais foram os materiais e métodos utilizados p
 
 Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objetivos desse projeto foram relacionados com o auxílio dos pesquisadores do LIS e alunos de mestrado da UnB/FGA.
 
+O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a comunicação via porta serial  e com o microcontrolador Arduíno, com ele foram adquirido os parâmetros de um sensor MPU6050, em seguida foi realizada a multiplexação de 3 sensores para poder obter medidas de 3 pontos ao mesmo tempo através de um único Arduíno. A segunda etapa foi tentar comunicar o sensor com o computador por meio de transmissão sem fio e com protocolo HTTP, utilizando o ESP8266 e seu módulo de WiFi.
+   
 \section{Projeto de Hardware}
 
-
- 
 	\subsection{Materiais Utilizados}
 		\begin{itemize}
 			
 			\item Sensor MPU6050;
 			\item Arduíno Nano V.3;
+			\item WeMos D1 -R2;
 			\item Fios (\textit{jumpers});
-			\item Cabo USB;
+			\item Cabo USB/Micro USB;
+			\item Cabo USB/Mini USB;
 			\item Computador com Arduíno IDE e \textit{Python} instalados;
 			\item \textit{Jupyter Notebook};
 			\item Tiras de velcro;
 			\item Cabo \textit{flat} (8 fios);
-			\item \textit{Protoboard}.
-			
+			\item \textit{Protoboard};
+			\item Placa de Cobre  Perfurada - 15x10cm;
+			\item Bateria 5V - 2A -  conector - Mini USB .
 		\end{itemize}	
 	 
 	\subsection{Métodos}
@@ -386,7 +404,7 @@ Os requisitos do projeto, que compuseram o \textit{backlog} e definiram os objet
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[keepaspectratio=true,scale=0.4]{figuras/comunicacao.PNG}
+			\includegraphics[keepaspectratio=true,scale=0.8]{figuras/comunicacao.PNG}
 			\caption{ Transmissão de dados do MPU6050 para Arduíno}
 			Fonte: autoria própria. 
 			\label{comunicacao}	
