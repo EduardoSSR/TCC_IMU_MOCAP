@@ -62,7 +62,7 @@ Logo a Taxa de Nyquist para amostragem de sinais de movimento humano é de 320 H
 
 		Na forma mais geral, os MEMS consistem em microestruturas mecânicas, microssensores, microatuadores e microeletrônica, todos integrados no mesmo \textit{chip} de silício (Figura \ref{esquematico_mems}). Microsensores detectam mudanças no ambiente do sistema medindo informações ou fenômenos mecânicos, térmicos, magnéticos, químicos ou eletromagnéticos. A microeletrônica processa essa informação e sinaliza aos microatuadores para reagirem e criarem alguma forma de mudanças no meio ambiente \cite{prime2002}.
 
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.7
 			]{figuras/esquematico_mems.png}
@@ -73,7 +73,7 @@ Logo a Taxa de Nyquist para amostragem de sinais de movimento humano é de 320 H
 
 		Os dispositivos MEMS são extremamente pequenos, seus componentes são geralmente microscópicos (Figura \ref{escala_mems}). Alavancas, engrenagens, pistões, motores e até motores a vapor foram todos fabricados por MEMS. No entanto, a tecnologia MEMS não se refere apenas à miniaturização de componentes mecânicos ou à fabricação de coisas a partir do silício (na verdade, o termo MEMS é enganoso, já que vários dispositivos micromaquinados não são mecânicos em nenhum sentido). MEMS é uma tecnologia de fabricação, um paradigma para projetar e criar dispositivos e sistemas mecânicos complexos, bem como sua eletrônica integrada, utilizando técnicas de fabricação em lote \cite{prime2002}.
 
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.5
 			]{figuras/escala_mems.png}
@@ -88,10 +88,10 @@ Logo a Taxa de Nyquist para amostragem de sinais de movimento humano é de 320 H
 		
 		Os sensores de IMU podem ser capazes de medir diversas variáveis. Os mais comuns são feitos para medir 6 graus de liberdade. São 3 medidas de aceleração linear a partir de um acelerômetro e 3 medidas de aceleração angular feitas por um giroscópio (Figura \ref{eixos_imu}) \cite{santos2016}.
 		 
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.8]{figuras/Eixos_imu.png}
-			\caption{Eixos de orientação. Adaptada de \citeonline{mpu6050}}
+			\caption{Eixos de orientação. Adaptada de \citeonline{mpu6050}.}
 			\label{eixos_imu}	
 		\end{figure}
 
@@ -99,7 +99,7 @@ Logo a Taxa de Nyquist para amostragem de sinais de movimento humano é de 320 H
 		A vantagem de usar este tipo de IMU é que não será interferido pelo campo magnético externo em torno do
 		sensor quando é usado próximo demais de material ferromagnético. Por outro lado, dependendo do acelerômetro e do giroscópio, pode não ser suficiente para aumentar a precisão da medição devido ao ruído dos sensores e à questão do desvio do giroscópio. Os dados adquiridos pelo IMU são integrados como mostrado na Figura \ref{integracao_imu} \cite{ahmad2013}.
 
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.5
 			]{figuras/integracao_imu.png}
@@ -146,12 +146,12 @@ Logo a Taxa de Nyquist para amostragem de sinais de movimento humano é de 320 H
 				
 				Existem os que funcionam a partir do efeito de cristais piezoelétricos, que é o princípio no qual alguns cristais geram uma corrente elétrica como resposta a uma pressão mecânica. Então, o acelerômetro  funciona como na Figura \ref{acel} demonstra, como uma pequena caixa com uma esfera dentro, e as paredes são os cristais piezoelétricos.  Sempre que a caixa é alterada de posição a esfera é forçada a se mover em direção de uma das paredes devido a força da gravidade ou de qualquer outra força de aceleração em outro sentido que não a normal. Cada par de paredes paralelas correspondem a um eixo no espaço. Assim, a partir da corrente gerada em cada parede é possível determinar a direção do movimento acelerado e sua magnitude \cite{Sanjeev2018}.
 				
-				\begin{figure}[h]
+				\begin{figure}[h!]
 					\centering
 					\includegraphics[keepaspectratio=true,scale=0.8
 					]{figuras/acelerometro.PNG}
-					\caption{Princípio de funcionamento do acelerômetro.}
-					Fonte adaptada de \cite{Sanjeev2018}
+					\caption{Princípio de funcionamento do acelerômetro. Adaptada de \citeonline{Sanjeev2018}.}
+					
 					\label{acel}
 				\end{figure}
 	
@@ -161,7 +161,7 @@ Logo a Taxa de Nyquist para amostragem de sinais de movimento humano é de 320 H
 			
 			O giroscópio do tipo diapasão é constituído por duas massas paralelas que oscilam com a mesma amplitude, direção igual e sentidos opostos mostrado na Figura \ref{gyro}.
 			
-			\begin{figure}[h]
+			\begin{figure}[h!]
 				\centering
 				\includegraphics[keepaspectratio=true,scale=0.7
 				]{figuras/diapasao.png}
@@ -259,9 +259,9 @@ Uma das maiores vantagens do Arduíno sobre outras plataformas de prototipagem c
 Existem diversos modelos de placas Arduíno no mercado, sendo as mais utilizadas Lilypad, Uno, Mini Pro, Mega e Nano. Cada uma dessas placas possuem suas particularidades em relação ao número de recursos, formato físico, memória e capacidade de processamento. Na Tabela \ref{tipos_arduino} estão listados alguns modelos e suas características \cite{smith2016}.
 
 
-\begin{table}[h] \footnotesize
+\begin{table}[h!] \footnotesize
 	\centering
-	\caption{Tabela de comparação dos modelos de Arduíno. Adptado de \citeonline{smith2016}}
+	\caption{Tabela de comparação dos modelos de Arduíno. Adaptado de \citeonline{smith2016}.}
 	\label{tipos_arduino}
 	
 	\begin{tabular}{lccccc}
@@ -285,7 +285,7 @@ Existem diversos modelos de placas Arduíno no mercado, sendo as mais utilizadas
 
 O Arduíno Nano (Figura \ref{arduino}) tem funcionalidades  semelhantes às do Arduíno Duemilanove, mas com um formato diferente. O Nano possui o microcontrolador ATmega328P embutido, o mesmo que o Arduíno UNO. A principal diferença entre eles é que a placa UNO é apresentada em formato PDIP (\textit{Plastic Dual-In-line Package}) com 30 pinos e Nano está disponível em PQFP (\textit{Plastic Quad Flat Pack}) com 32 pinos. Os 2 pinos extras do Arduno Nano servem para as funcionalidades do ADC, enquanto o UNO possui 6 portas ADC, o Nano possui 8. A placa Nano não vem com um conector para fonte DC (\textit{Direct Current} - Corrente Contínua) como outras placas Arduíno, mas possui uma porta mini-USB. Esta porta é usada para programação, monitoramento serial e alimentação (se necessário). A característica mais fascinante do Nano é que ele escolherá a fonte de energia com maior diferença de potencial, e o \textit{jumper} de seleção de fonte de energia não precisa ser utilizado \cite{john2018}.  
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.77
 	]{figuras/arduino_nano.png}
@@ -306,7 +306,7 @@ Existe uma grande variedade de placas disponíveis no Brasil.  Mas em todas elas
 
 Um dos modelos é a placa Wemos D1 (Figura \ref{wemosd1} ), que tem o mesmo formato do Arduíno UNO, o que deixa a utilização mais confortável para usuários do Arduíno. Esse modelo possui todos os seus pinos descritos na própria placa, também possui pinos para comunicação $I^2C$, conector micro USB e um conector de carga que aceita tensão entre 9 e 24 V \cite{kolban2016}\cite{wemos2017}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.7
 	]{figuras/wemosd1.png}
@@ -330,12 +330,12 @@ O principal objetivo de qualquer linguagem de programação é fazer uma ponte e
 
 \textit{Hypertext Transfer Protocol} (HTTP)  é o método utilizado para enviar e receber informações na \textit{web}.  A versão mais utilizada atualmente é a 1.1, definida pela especificação RFC 2616. RFCs (\textit{Request for Comments}) são documentos técnicos desenvolvidos e mantidos pelo IETF (\textit{Internet Enginnering Task Force}), instituição que especifica os padrões que serão implementados e utilizados em toda a internet \cite{vieira2007}.
 
- O protocolo é baseado em requisições e respostas entre clientes e servidores. O cliente, navegador ou dispositivo que fará a requisição (também é conhecido como \textit{user agent}), solicita um determinado  \textit{resource} (recurso) enviando um pacote de informações contendo alguns cabeçalhos (\textit{headers}) a um URI (\textit{Uniform Resource Identifier - Identificador Uniforme de Recurso }) ou, mais especificamente, URL (Uniform Resource Locator - Localizador Uniforme de Recursos). O servidor recebe estas informações e envia uma resposta, que pode ser um recurso ou um simplesmente um outro cabeçalho \cite{vieira2007}.
+ O protocolo é baseado em requisições e respostas entre clientes e servidores. O cliente, navegador ou dispositivo que fará a requisição (também é conhecido como \textit{user agent}), solicita um determinado  \textit{resource} (recurso) enviando um pacote de informações contendo alguns cabeçalhos (\textit{headers}) a um URI (\textit{Uniform Resource Identifier} - Identificador Uniforme de Recurso ) ou, mais especificamente, URL (\textit{Uniform Resource Locator} - Localizador Uniforme de Recursos). O servidor recebe estas informações e envia uma resposta, que pode ser um recurso ou um simplesmente um outro cabeçalho \cite{vieira2007}.
  
- O protocolo HTTP é\textit{ stateless}, ou seja, ele não é capaz por si só de reter informações entre requisições diferentes. Para manter informações é necessário utilizar \textit{cookies}, sessões, campos de formulário ou variáveis na própria URL \cite{vieira2007}.
+ O HTTP é\textit{ stateless}, ou seja, ele não é capaz por si só de reter informações entre requisições diferentes. Para manter informações é necessário utilizar \textit{cookies}, sessões, campos de formulário ou variáveis na própria URL \cite{vieira2007}.
  
 Quando um requisição é realizada, é preciso especificar qual método deve ser utilizado. O HTTP possui 8,  conhecidos por verbos, 
-identificam a ação a ser executada por certo recurso.  Os 5 métodos mais utilizados são: \textit{get, post}, delete, \textit{put} e \textit{head} \cite{vieira2007}\cite{szigalski2018}. 
+identificam a ação a ser executada por certo recurso.  Os 5 métodos mais utilizados são: \textit{get, post}, \textit{delete}, \textit{put} e \textit{head} \cite{vieira2007}\cite{szigalski2018}. 
 
 \textit{Get} solicita a representação  de um recurso. É definido como um método seguro e não deve ser usado para disparar uma ação.  \textit{Post} é a informação enviada ao corpo da requisição e é utilizado para criar um novo recurso. \textit{Delete} remove um recurso. \textit{Put} atualiza um recurso na URI especificada. Caso o recurso não exista, ele pode criar um. A principal diferença entre \textit{post} e \textit{put} é que o primeiro pode lidar não somente com recursos, mas pode fazer processamento de informações, por exemplo. \textit{Head} retorna informações sobre um recurso. Na prática, funciona semelhante ao método \textit{get}, mas sem retornar o recurso no corpo da requisição. É considerado um método seguro \cite{vieira2007}.
 
@@ -383,7 +383,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 		
 		O sensor foi fixado em uma faixa de velcro, para permitir a fixação do IMU em diversas partes do corpo, e para conectá-lo ao Arduíno foi soldado ao sensor um cabo \textit{flat} com 8 fios.
 		
-		\begin{table}[h] \footnotesize
+		\begin{table}[h!] \footnotesize
 			\centering
 			\caption{Conexões entre Arduíno e MPU6050}
 			\label{conexoes_arduino}
@@ -401,7 +401,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 			\end{tabular}
 		\end{table}
 		
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/conexoes_mpu_arduino.PNG}
 			\caption{ Esquemático de conexão do MPU6050 com Arduíno Nano (Imagem do autor).}
@@ -411,15 +411,15 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 		
 		A comunicação entre o sensor MPU6050 e o Arduíno foi realizada através do protocolo $I^2C$, onde os dados eram enviados de forma serial através de apenas um fio e os dados organizados como mostrado na Figura \ref{comunicacao}, onde é evidenciado quais são os dados transmitidos do MPU6050 para o Arduíno e a velocidade do \textit{clock}, e Figura \ref{i2c}, que mostra com mais detalhe a relação dos dados com o \textit{clock}.
 		
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=1]{figuras/comunicacao.PNG}
-			\caption{ Transmissão de dados do MPU6050 para Arduíno}
-			Fonte: imagem do autor. 
+			\caption{ Transmissão de dados do MPU6050 para Arduíno (Imagem do autor).}
+		 
 			\label{comunicacao}	
 		\end{figure}
 		
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.5]{figuras/i2c.PNG}
 			\caption{Transferência de dados com o protocolo $I^2C$. }
@@ -431,7 +431,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 		
 		Ainda na primeira etapa foi realizada a montagem utilizando 3 sensores.  Para isso foi preciso adicionar mair um pino do MPU6050 a montagem, para poder realizar a multiplexação deles. Foi utilizado o pino AD0, responsável por definir um nome de endereço para o sensor. Quando o é conectado com 0 V (Nível Lógico Baixo), o seu endereço de registrador se torna 0x68, e quando ligado entre 3.3 e 5 V (Nível Lógico Alto), é alterado para 0x69.  Dessa forma foi possível realizar a leitura dos sensores de forma sequencial. A tabela \ref{conexoes_mult} mostra as conexões necessárias.
 		
-		 	\begin{table}[h] \footnotesize
+		 	\begin{table}[h!] \footnotesize
 		 	\centering
 		 	\caption{Conexões entre Arduíno e 3 Sensores }
 		 	\label{conexoes_mult}
@@ -448,7 +448,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 		 		D3 & - & AD0 & - \\
 		 		D4 & - & - & AD0 \\
 		 		\bottomrule
-		 		Fonte: & autoria própria
+		 	%	Fonte: & autoria própria
 		 	\end{tabular}
 		 \end{table}
 	 
@@ -456,7 +456,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 	 
 	 A Tabela \ref{conexoes_esp} mostra a conexão do MPU6050 com a ESP8266, a qual,  é semelhante à primeira montagem realizada com o Arduino, sendo alterado apenas o nome dos pinos que representam SCL e SDA, na Wemos, que são, respectivamente, os pinos digitais D1 e D2.
 	  
-	 \begin{table}[h] \footnotesize
+	 \begin{table}[h!] \footnotesize
 	 	\centering
 	 	\caption{Conexões entre Wemos e Sensor  }
 	 	\label{conexoes_esp}
@@ -470,7 +470,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 	 		D2  & SDA  \\
 	 		D1 & SCL \\
 	 		\bottomrule
-	 		Fonte: & autoria própria
+	 		%Fonte: & autoria própria
 	 	\end{tabular}
 	 \end{table}
  
@@ -494,11 +494,10 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 		
 		O fluxograma do \textit{software} responsável pela leitura dos dados do MPU6050 e envio para a \textit{interface} de comunicação serial é o mostrado na Figura \ref{fluxograma_arduino}. 
 		
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.9]{figuras/diagrama_embarcado.PNG}
-			\caption{Fluxograma do \textit{software} de leitura dos dados. }
-			Fonte: imagem do autor. 
+			\caption{Fluxograma do \textit{software} de leitura dos dados. (Imagem do autor).} 
 			\label{fluxograma_arduino}	
 		\end{figure}
 		
@@ -514,7 +513,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 
 	O \textit{software} ou \textit{firmware} do microcontrolador ESP8266,  precisa de uma biblioteca específica para ele poder ser escrito na IDE do Arduíno, a ESP8266WiFi.h, responsável pela configuração do módulo \textit{wireless}. 
 	
-	O código primeiro configura o módulo como servidor \textit{WiFi} habilitando a porta 80.  A variáveis são inicializadas e dentro da função \textit{setup} e são iniciados os modos de comunicação serial e \textit{wire},  o sensor MPU6050 é ligado e configurado para transmissão  dos parâmetros de movimento. 
+	O código primeiro configura o módulo como servidor \textit{Wi-Fi} habilitando a porta 80.  A variáveis são inicializadas e dentro da função \textit{setup} e são iniciados os modos de comunicação serial e \textit{wire},  o sensor MPU6050 é ligado e configurado para transmissão  dos parâmetros de movimento. 
 	
 	Os endereços para utilização do protocolo HTTP são escritos,  o microcontrolador é configurado como ponto de acesso, seu nome e senha são salvos. E os endereços escritos anteriormente são salvos nas configurações do módulo.
 
@@ -534,7 +533,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 		
 		Para definir melhor os requisitos do \textit{software}, foi feita a seguinte história de usuário descrita na Tabela \ref{User_story}, e a partir dela foi possível desenvolver o \textit{software} inicial e com ele realizar os testes preliminares do protótipo.
 		
-			\begin{table}[h] \footnotesize
+			\begin{table}[h!] \footnotesize
 			\centering
 			\caption{História de Usuário}
 			\label{User_story}
@@ -561,11 +560,11 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 			\end{tabular}
 		\end{table}
 		
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=1]{figuras/diagrama_python.PNG}
-			\caption{Fluxograma do \textit{software} que salva os dados lidos. }
-			Fonte: imagem do autor. 
+			\caption{Fluxograma do \textit{software} que salva os dados lidos (Imagem do autor).}
+		 
 			\label{fluxograma_python}	
 		\end{figure}
 		
@@ -585,11 +584,11 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 
 	Para testar o funcionamento dos acelerômetros do IMU foi feito um teste simples. Pois sempre que o sensor estiver "parado", ele estará sobre efeito da força do peso e consequentemente da aceleração da gravidade de aproximadamente 9,8 m/$ s^2 $. Então para verificar, foi necessário testar o sensor com um eixo de cada vez alinhado com a Normal, como na Figura \ref{acel_validation}, onde a imagem mais à direita mostra o MPU6050 com do eixo X paralelo a Normal, a imagem à direita com o eixo Y paralelo a Normal e ao centro o eixo Z.
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.8]{figuras/validacao_acel.PNG}
-		\caption{Demonstração da posição do sensor}
-		Fonte: imagem do autor. 
+		\caption{Demonstração da posição do sensor (Imagem do autor).}
+		 
 		\label{acel_validation}	
 	\end{figure}
 	
@@ -597,11 +596,11 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 	
 	Para verificar se os giroscópios estavam funcionando, sem ainda se atentar a precisão deles e confiabilidade das medidas, foi realizado um movimento de rotação de 90$ \degree $ em relação a cada um dos eixos, como na Figura \ref{validacao_giro}  e ao fim da leitura do sensor o resultado foi plotado em um gráfico para facilitar a análise.
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.55]{figuras/validacao_giro.png}
-		\caption{Demonstração direção de giro do sensor}
-		Fonte: imagem do autor. 
+		\caption{Demonstração direção de giro do sensor (Imagem do autor).}
+	
 		\label{validacao_giro}	
 	\end{figure}
 	
@@ -626,35 +625,33 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 	
 	As Figuras \ref{prototipo1} e \ref{prototipo1_2} mostram a primeira montagem feita do IMU para programar o microcontrolador e verificar a comunicação entre o sensor e o Arduíno. As Figuras \ref{prototipo2} e \ref{prototipo3} mostram a segunda montagem realizada do IMU, onde ele foi soldado com um cabo \textit{flat} e preso em uma tira de velcro.
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
-		\includegraphics[keepaspectratio=true,scale=0.15]{figuras/prototipo1.jpg}
-		\caption{Protótipo na \textit{Protoboard}}
-		Fonte: imagem do autor. 
+		\includegraphics[keepaspectratio=true,scale=0.12]{figuras/prototipo1.jpg}
+		\caption{Protótipo na \textit{Protoboard} (Imagem do autor).}
+
 		\label{prototipo1}	
 	\end{figure}
 	 
-	 	\begin{figure}[h]
+	 	\begin{figure}[h!]
 	 		\centering
-	 		\includegraphics[keepaspectratio=true,scale=0.15]{figuras/prototipo2.jpg}
-	 		\caption{MPU6050 na \textit{Protoboard}}
-	 		Fonte: imagem do autor. 
+	 		\includegraphics[keepaspectratio=true,scale=0.12]{figuras/prototipo2.jpg}
+	 		\caption{MPU6050 na \textit{Protoboard} (Imagem do autor).}
+	 		
 	 		\label{prototipo1_2}	
 	 	\end{figure}
 	 	
-	 	\begin{figure}[h]
+	 	\begin{figure}[h!]
 	 		\centering
-	 		\includegraphics[keepaspectratio=true,scale=0.15]{figuras/prototipo_2_1.jpg}
-	 		\caption{Segundo Protótipo com o Velcro}
-	 		Fonte: imagem do autor. 
+	 		\includegraphics[keepaspectratio=true,scale=0.12]{figuras/prototipo_2_1.jpg}
+	 		\caption{Segundo Protótipo com o Velcro (Imagem do autor).} 
 	 		\label{prototipo2}	
 	 	\end{figure}
-	 	\begin{figure}[h]
+	 	\begin{figure}[h!]
 	 		\centering
 	 		\includegraphics[keepaspectratio=true,scale=0.1]{figuras/prototipo_2_2.jpg}
 	 		\includegraphics[keepaspectratio=true,scale=0.1]{figuras/prototipo_2_3.jpg}
-	 		\caption{Protótipo Fixado ao Punho e a um Cubo}
-	 		Fonte: imagem do autor. 
+	 		\caption{Protótipo Fixado ao Punho e a um Cubo (Imagem do autor).} 
 	 		\label{prototipo3}	
 	 	\end{figure}
 	 
@@ -664,39 +661,38 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 	
 	E na Figura \ref{rodando}, aparece a mensagem para iniciar a leitura do sensor e alguns dos dados lidos são mostrados para o usuário, precisando apenas pressionar 'I' duas vezes para pausar a leitura e salvar os dados em dois arquivos. Apenas para os testes foram acrescentados ao final do programa a geração de dois gráficos, um com os dados obtidos dos acelerômetros e o outro para o giroscópio. 
 	 	
-	 	\begin{figure}[h]
+	 	\begin{figure}[h!]
 	 		\centering
-	 		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/tela_inicial.png}
-	 		\caption{Tela Inicial}
-	 		Fonte: imagem do autor. 
+	 		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/tela_inicial.png}
+	 		\caption{Tela Inicial (Imagem do autor).}
+	 	
 	 		\label{tela_inicial}	
 	 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
-		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/lista_ranges.png}
-		\caption{Lista com as escalas}
-		Fonte: imagem do autor. 
+		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/lista_ranges.png}
+		\caption{Lista com as escalas (Imagem do autor).}
+		
 		\label{lista_ranges}	
 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/programa_rodando.png}
-		\caption{Programa mostrando os resultados}
-		Fonte: imagem do autor. 
+		\caption{Programa mostrando os resultados (Imagem do autor).}
+	
 		\label{rodando}	
 	\end{figure}
 	
 		
 	Os gráficos apresentados na Figura \ref{acelx_0}, mostram o resultado parcial do teste para medir a aceleração da gravidade com cada um dos 3 acelerômetros. É possível a partir deles verificar que os acelerômetros estão obtendo valores realistas para as medidas feitas, pois todos os gráficos apresentaram um valor próximo ao da aceleração da gravidade. Os gráficos ainda não estão com aspecto ideal, dando a sensação de presença de ruído, mas isso pode ser corrigido com um \textit{buffer} para carregar uma quantidade de valores e mostrar apenas a média deles, porque o sensor é sensível a pequenas variações de aceleração.   
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/graficos_acel.png}
-		\caption{Gráficos com os 3 Eixos alinhados com a Normal.}
-		Na imagem à esquerda o Eixo X está alinhado, à direita o Eixo Y e ao centro o Eixo Z. \footnotesize
-		Fonte: imagem do autor. 
+		\caption{Gráficos com os 3 Eixos alinhados com a Normal. (Imagem do autor).}
+		Na imagem à esquerda o Eixo X está alinhado, à direita o Eixo Y e ao centro o Eixo Z. \footnotesize 
 		\label{acelx_0}	
 	\end{figure}		
 	
@@ -704,76 +700,75 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 	
 	Porém, mesmo com o gráfico não apresentando o resultado ideal, é possível verificar a variação nas velocidades de rotação em cada giroscópio separadamente, o que demonstra que os giroscópios funcionam. 
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.7]{figuras/teste_giro.png}
-		\caption{Gráficos para Teste do Giroscópio.}
-		\footnotesize Fonte: imagem do autor. 
+		\caption{Gráficos para Teste do Giroscópio (Imagem do autor).}
 		\label{teste_giro}	
 			    
 	\end{figure}
 	
 			Foi obtido como resultado, também, a montagem da placa formada pelo Arduíno, cabos \textit{flat } e os 3 sensores vistos nas Figuras \ref{placa} , \ref{cabo} e \ref{mult}. O cabo \textit{flat} utilizado nesses sensores, não foi soldado, como  o primeiro utilizado, e sim \textit{crimpado}. Dessa forma ele ficou menos sensível a movimentação. O que havia sido soldado, acabou quebrando após algumas utilizações. 
 		
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.075]{figuras/placa_furada.jpg}
-			\caption{Placa Perfurada}
-			\footnotesize Fonte: imagem do autor. 
+			\caption{Placa Perfurada (Imagem do autor).}
+			
 			\label{placa}	
 		\end{figure}
 	
-			\begin{figure}[h]
+			\begin{figure}[h!]
 			\centering
 			\includegraphics[keepaspectratio=true,scale=0.075]{figuras/cabo_mpu.jpg}
-			\caption{Cabo Flat com Sensor}
-			\footnotesize Fonte: imagem do autor. 
+			\caption{Cabo Flat com Sensor (Imagem do autor).}
+		
 			\label{cabo}	
 		\end{figure}
 		
-		\begin{figure}[h]
+		\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.075]{figuras/multiplexados.jpg}
-		\caption{3 sensores Multiplexados}
-		\footnotesize Fonte: imagem do autor. 
+		\caption{3 sensores Multiplexados (Imagem do autor).}
+		
 		\label{mult}	
 	\end{figure}
 	
 	O resultado do fim da execução do programa utilizando os 3 sensores foi o mostrado na figura \ref{exec3}. O início do programa é parecido com o primeiro. O resultado obtido foi mostrado em relação ao tempo de execução em segundos e foi igual a 0,00235 s. Sabendo que $f = 1/s$ então $ f = 425,5 Hz $ .
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/execut_3s.png}
-		\caption{Final da Execução dos 3 Sensores}
-		\footnotesize Fonte: imagem do autor. 
+		\caption{Final da Execução dos 3 Sensores (Imagem do autor).}
+		
 		\label{exec3}	
 	\end{figure}
 	
 	Seriam gerados, como resultado, os gráficos de cada um dos sensores. Não foi implementado porque antes de escrever esta parte do código, a qual exigia algumas manipulações nos dados, foi iniciada a segunda etapa do projeto. 
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.075]{figuras/wemos1.jpg}
-		\caption{Wemos com Sensor MPU6050}
-		\footnotesize Fonte: imagem do autor. 
+		\caption{Wemos com Sensor MPU6050 (Imagem do autor).}
+		
 		\label{wemos1}	
 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.075]{figuras/wemos2.jpg}
-		\caption{Wemos Configurada como Ponto de Acesso WiFi}
-		\footnotesize Fonte: imagem do autor. 
+		\caption{Wemos Configurada como Ponto de Acesso WiFi (Imagem do autor).}
+	 
 		\label{wemos2}	
 	\end{figure}
 	
 	Os últimos resultados obtidos foram o sensor conectado à placa Wemos, a comunicação sem fio (Figura \ref{wemos1} e \ref{wemos2}), a alimentação por bateria recarregável, a execução do programa para obtenção dos dados (Figura \ref{exechtml}) e a frequência de execução do código.
 	
-		\begin{figure}[h]
+		\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/execute_html.png}
-		\caption{Final da Execução da Leitura  Sem Fio}
-		\footnotesize Fonte: imagem do autor. 
+		\caption{Final da Execução da Leitura  Sem Fio (Imagem do autor).}
+		
 		\label{exechtml}	
 	\end{figure}
 	
@@ -783,8 +778,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.8]{figuras/frequenciaXdist.png}
-		\caption{Frequêcia x Distância}
-		\footnotesize Fonte: imagem do autor. 
+		\caption{Frequêcia x Distância (Imagem do autor).}
 		\label{grafico}	
 	\end{figure}
 	
@@ -806,7 +800,7 @@ O trabalho foi divido em duas etapas, a primeira etapa foi focada em realizar a 
 	
 	A medição dos movimentos  humanos é bem importante para estudos sobre prevenção de lesão em atletas, correção de postural e outros tratamentos fisioterápicos. Para realizar essas medições são necessários equipamentos específicos. E o IMU surge como uma solução viável para facilitar o acesso dos pesquisadores a sensores de utilização menos complexas e de custo mais baixo. 
 	
-	Foi concluído, neste trabalho, o protótipo de um sensor IMU capaz de medir a aceleração linear em três eixos, e a velocidade angular em três eixos. É possível utilizar mais de um sensor conectado a um único microcontrolador para obtenção de parâmetros de movimentação em até 3 pontos de interesse. A partir dos resultados obtidos, é possível afirmar que com essas seis medições realizadas por cada sensor, os pesquisadores podem obter dados de aceleração linear e velocidade angular, e manipular esse dados para obtenção de outras medidas, por exemplo, velocidade linear, posição e ângulos . Sendo necessário validar os dados obtidos através do sensor, que foi o objetivo desse trabalho.
+	Foi concluído, neste trabalho, o protótipo de um sensor IMU capaz de medir a aceleração linear em três eixos, e a velocidade angular em três eixos. Os parâremtros que podem ser calculados com esse dados são velocidade linear, deslocamento e ângulos em relação aos 3 eixos. É possível utilizar mais de um sensor conectado a um único microcontrolador para obtenção dos parâmetros de movimento em até 3 pontos de interesse simultaneamente com a multiplexação dos canais de entrada. A partir dos resultados obtidos é possível afirmar que os sensores podem ser utilizados para realizar coleta de parâmetros de movimento. Sendo necessário validar os dados obtidos através do sensor, o que não foi o objetivo desse trabalho.
 	
 	A comunicação sem fio pode ser útil para utilização do sensor com maior grau de liberdade de movimentos, mas o protocolo utilizado nesse projeto ainda não é o ideal, devendo ser otimizado para realização de coletas mais precisas. 
 	
